@@ -57,6 +57,8 @@ namespace FormBuilderBuilder.Controllers
 			{
 				BuildPages buildPages = new BuildPages();
 				buildPages.BuildTheJson(pageChoiceViewModel.TheJSON);
+
+				ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
 				return View("PageChoice", pageChoiceViewModel);
 			}
 
@@ -93,6 +95,7 @@ namespace FormBuilderBuilder.Controllers
 			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel();
 			pageChoiceViewModel.TheJSON = theJSON;
 
+			ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
 			return View("PageChoice", pageChoiceViewModel);
 		}
 
