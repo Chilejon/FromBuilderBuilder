@@ -1,0 +1,31 @@
+{
+  "Title": "#TextboxTitle",
+  "PageSlug": "#TextboxPageSlug",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "#TextboxQuestionID",
+        "Label": "#TextboxLabel",
+        "LabelAsH1": true,
+        "CustomValidationMessage": "#TextboxCustomValidationMessage",
+        "Optional": "#TextboxOptional"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "#TextboxGoPageSlug"
+    }
+  ]
+},

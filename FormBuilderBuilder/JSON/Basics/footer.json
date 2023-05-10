@@ -1,0 +1,32 @@
+{
+  "Title": "We've received your form",
+  "BannerTitle": "We've received your form",
+  "PageSlug": "success",
+  "HideBackButton": true,
+  "Elements": [
+    {
+      "Type": "H2",
+      "Properties": {
+        "Text": "What happens next"
+      }
+    },
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "You'll receive a confirmation email."
+      }
+    },
+    {
+      "Type": "link",
+      "Properties": {
+        "Text": "Go to the homepage",
+        "QuestionId": "LinkToHomePage",
+        "Url": "https://www.stockport.gov.uk/",
+        "OpenInTab": true,
+        "ClassName": "govuk-button"
+      }
+    }
+  ]
+}
+  ]
+}

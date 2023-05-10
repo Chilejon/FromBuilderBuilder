@@ -1,0 +1,78 @@
+﻿@model FormBuilderBuilder.Models.PageChoiceViewModel
+
+@{
+    ViewData["Title"] = "PageChoice";
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="PageChoice">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PageChoice" class="control-label"></label>
+                <label class="govuk-label govuk-radios__label"
+                       for="Textbox">
+                    Textbox -
+                </label><input type="radio" name="PageChoice" value="Textbox" />
+                
+                <br />
+
+                <label class="govuk-label govuk-radios__label"
+                       for="TextArea">
+                    TextArea -
+                </label><input type="radio" name="PageChoice" value="TextArea" />
+                
+                <br />
+              
+                <label class="govuk-label govuk-radios__label"
+                       for="FullContactDetails">
+                    Full Contact Details -
+                </label><input type="radio" name="PageChoice" value="FullContactDetails" />
+                
+                <br />
+                
+                <label class="govuk-label govuk-radios__label"
+                       for="NameDetails">
+                    Name Details -
+                </label><input type="radio" name="PageChoice" value="NameDetails" />
+                <br />
+
+                <label class="govuk-label govuk-radios__label"
+                       for="Address">
+                    Address -
+                </label><input type="radio" name="PageChoice" value="Address" />
+                
+                <br />
+
+                <label class="govuk-label govuk-radios__label"
+                       for="ContactDetails">
+                    ContactDetails - 
+                </label><input type="radio" name="PageChoice" value="ContactDetails" />
+                
+                <br />
+
+                <label class="govuk-label govuk-radios__label"
+                       for="Footer">
+                    Footer -
+                </label><input type="radio" name="PageChoice" value="Footer" />
+               
+                <br />
+
+                <input asp-for="TheJSON" hidden class="form-control" value="@ViewBag.TheJson" />
+ 
+                <span asp-validation-for="PageChoice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

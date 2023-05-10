@@ -1,0 +1,33 @@
+﻿@model FormBuilderBuilder.Models.HomeViewModel
+
+@{
+    ViewData["Title"] = "Header";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FormNme" class="control-label"></label>
+                <input asp-for="FormNme" class="form-control" />
+                <span asp-validation-for="FormNme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BaseURL" class="control-label"></label>
+                <input asp-for="BaseURL" class="form-control" />
+                <span asp-validation-for="BaseURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstPageSlug" class="control-label"></label>
+                <input asp-for="FirstPageSlug" class="form-control" />
+                <span asp-validation-for="FirstPageSlug" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+

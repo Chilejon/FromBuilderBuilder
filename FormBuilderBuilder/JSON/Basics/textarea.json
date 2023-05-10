@@ -1,0 +1,34 @@
+{
+  "Title": "#TextareaTitle",
+  "PageSlug": "#TextareaPageSlug",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "Textarea",
+      "Properties": {
+        "QuestionId": "#TextareaQuestionID",
+        "Label": "#TextareaLabel",
+        "LabelAsH1": true,
+        "Hint": "#TextareaHint",
+        "CustomValidationMessage": "#TextareaCustomValidationMessage",
+        "Optional": "#TextareaOptional",
+        "MaxLength": #TextareaMaxLength,
+        "DisplayCharacterCount": #TextareaDisplayCharacterCount
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "#TextareaGoPageSlug"
+    }
+  ]
+},

@@ -1,0 +1,55 @@
+{
+  "FormName": "ormNme",
+  "BaseURL": "aseURL",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "FirstPageSlug",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "stage",
+      "IsAvailable": false
+    },
+    {
+      "Environment": "prod",
+      "IsAvailable": false
+    }
+  ],
+  "Pages": [
+{
+  "Title": "sdfgds",
+  "PageSlug": "wert",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "fdgsdfg",
+        "Label": "wert",
+        "LabelAsH1": true,
+        "CustomValidationMessage": "dsfgsdfgsdfg",
+        "Optional": "ewrt"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "sdfgsdfg"
+    }
+  ]
+},

@@ -1,0 +1,67 @@
+﻿@model FormBuilderBuilder.Models.TextboxViewModel
+
+@{
+    ViewData["Title"] = "Textbox";
+}
+
+<h1>Textbox</h1>
+
+<h4>TextboxViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Textbox">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PageSlug" class="control-label"></label>
+                <input asp-for="PageSlug" class="form-control" />
+                <span asp-validation-for="PageSlug" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuestionID" class="control-label"></label>
+                <input asp-for="QuestionID" class="form-control" />
+                <span asp-validation-for="QuestionID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Label" class="control-label"></label>
+                <input asp-for="Label" class="form-control" />
+                <span asp-validation-for="Label" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomValidationMessage" class="control-label"></label>
+                <input asp-for="CustomValidationMessage" class="form-control" />
+                <span asp-validation-for="CustomValidationMessage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Optional" class="control-label"></label>
+                <input asp-for="Optional" class="form-control" />
+                <span asp-validation-for="Optional" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoPageSlug" class="control-label"></label>
+                <input asp-for="GoPageSlug" class="form-control" />
+                <span asp-validation-for="GoPageSlug" class="text-danger"></span>
+            </div>
+            
+
+            <input asp-for="TheJSON" hidden class="form-control" value="@Model.TheJSON" />
+            @*<input type="hidden" id="TheJSON" name="TheJSON" value="@ViewBag.TheJson" />*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
