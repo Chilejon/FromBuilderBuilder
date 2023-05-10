@@ -1,8 +1,8 @@
 {
-  "FormName": "sdfgsdfg",
-  "BaseURL": "sdgsdfg",
+  "FormName": "afsdf",
+  "BaseURL": "asdfasdf",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "sdfgsdfg",
+  "FirstPageSlug": "asdfasdfas",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -23,19 +23,19 @@
   ],
   "Pages": [
 {
-  "Title": "#TextboxTitle",
-  "PageSlug": "#TextboxPageSlug",
+  "Title": "asdf",
+  "PageSlug": "asdf",
   "HideTitle": true,
   "HideBackButton": false,
   "Elements": [
     {
       "Type": "Textbox",
       "Properties": {
-        "QuestionId": "#TextboxQuestionID",
-        "Label": "#TextboxLabel",
+        "QuestionId": "asdf",
+        "Label": "asdf",
         "LabelAsH1": true,
-        "CustomValidationMessage": "#TextboxCustomValidationMessage",
-        "Optional": "#TextboxOptional"
+        "CustomValidationMessage": "sadf",
+        "Optional": "asdf"
       }
     },
     {
@@ -49,10 +49,101 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "#TextboxGoPageSlug"
+      "PageSlug": "sadf"
     }
   ]
 },
+{
+  "Title": "What is your name?",
+  "PageSlug": "your-details",
+  "Elements": [
+    {
+      "Type": "Reusable",
+      "Properties": {
+        "QuestionId": "firstName"
+      },
+      "ElementRef": "firstname"
+    },
+    {
+      "Type": "Reusable",
+      "Properties": {
+        "QuestionId": "lastName"
+      },
+      "ElementRef": "lastname"
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep",
+        "Text": "Continue"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "your-address"
+    }
+  ]
+},
+      {
+        "Title": "What is your home address?",
+        "PageSlug": "your-address",
+        "Elements": [
+          {
+            "Type": "Address",
+            "Properties": {
+              "QuestionId": "address",
+              "AddressProvider": "CRM",
+              "StockportPostcode": false,
+              "MaxLength": 60
+            }
+          },
+          {
+            "Type": "Button",
+            "Properties": {
+              "ButtonId": "nextStep",
+              "Text": "Continue"
+            }
+          }
+        ],
+        "Behaviours": [
+          {
+            "conditions": [],
+            "behaviourType": "GoToPage",
+            "PageSlug": "your-contact-details"
+          }
+        ]
+      },
+      {
+        "Title": "What are your contact details?",
+        "PageSlug": "your-contact-details",
+        "Elements": [
+          {
+            "Type":"Reusable",
+            "Properties":{
+               "QuestionId":"email"
+            },
+            "ElementRef":"email"
+          },
+          {
+            "Type": "Button",
+            "Properties": {
+              "ButtonId": "nextStep",
+              "Text": "Submit"
+            }
+          }
+        ],
+        "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "#FullContactDetailsGoPageSlug"
+    }
+  ]
+},
+  
 {
   "Title": "What is your name?",
   "PageSlug": "your-details",

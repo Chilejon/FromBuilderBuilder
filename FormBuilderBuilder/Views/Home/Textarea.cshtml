@@ -58,11 +58,13 @@
                 <input asp-for="GoPageSlug" class="form-control" />
                 <span asp-validation-for="GoPageSlug" class="text-danger"></span>
             </div>
-            <div class="form-group">
+@*            <div class="form-group">
                 <label asp-for="TheJSON" class="control-label"></label>
                 <input asp-for="TheJSON" class="form-control" />
                 <span asp-validation-for="TheJSON" class="text-danger"></span>
-            </div>
+            </div>*@
+
+            <input asp-for="TheJSON" hidden class="form-control" value="@Model.TheJSON" />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

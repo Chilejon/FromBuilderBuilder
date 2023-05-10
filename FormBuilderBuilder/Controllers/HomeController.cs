@@ -55,20 +55,38 @@ namespace FormBuilderBuilder.Controllers
 			
 			if(pageChoiceViewModel.PageChoice == "FullContactDetails")
 			{
-				BuildPages buildPages = new BuildPages();
-				buildPages.BuildTheJson(pageChoiceViewModel.TheJSON);
-
-				ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
-				return View("PageChoice", pageChoiceViewModel);
+				
 			}
 
-			switch (pageChoiceViewModel.PageChoice)
+            
+
+            switch (pageChoiceViewModel.PageChoice)
 			{
 				case "Textbox":
-					TextboxViewModel viewModel = new TextboxViewModel();
-					viewModel.TheJSON = pageChoiceViewModel.TheJSON;
-					return View(pageChoiceViewModel.PageChoice, viewModel);
-				default:
+					TextboxViewModel TBviewModel = new TextboxViewModel();
+					TBviewModel.TheJSON = pageChoiceViewModel.TheJSON;
+					return View(pageChoiceViewModel.PageChoice, TBviewModel);
+
+				case "TextArea":
+					TextareaViewModel TAviewModel = new TextareaViewModel();
+					TAviewModel.TheJSON = pageChoiceViewModel.TheJSON;
+					return View(pageChoiceViewModel.PageChoice, TAviewModel);
+
+				case "FullContactDetails":
+                    BuildPages buildPages = new BuildPages();
+                    buildPages.BuildTheJson(pageChoiceViewModel.TheJSON);
+
+					ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+					return View("PageChoice", pageChoiceViewModel);
+
+                case "Footer":
+                    BuildPages fbuildPages = new BuildPages();
+                    fbuildPages.BuildTheJsonFooter(pageChoiceViewModel.TheJSON);
+
+                    ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+                    return View("PageChoice", pageChoiceViewModel);
+
+                default:
 					break;
 			}
 
@@ -95,7 +113,7 @@ namespace FormBuilderBuilder.Controllers
 			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel();
 			pageChoiceViewModel.TheJSON = theJSON;
 
-			ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+			ViewBag.TheJSON = textboxViewModel.TheJSON;
 			return View("PageChoice", pageChoiceViewModel);
 		}
 
@@ -106,7 +124,7 @@ namespace FormBuilderBuilder.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Textarea(TextboxViewModel textareaViewModel)
+		public IActionResult Textarea(TextareaViewModel textareaViewModel)
 		{
 			if (!ModelState.IsValid)
 			{
@@ -115,6 +133,7 @@ namespace FormBuilderBuilder.Controllers
 
 			BuildPages buildPages = new BuildPages();
 			string theJSON = buildPages.BuildTheJson(textareaViewModel);
+			ViewBag.TheJSON = textareaViewModel.TheJSON;
 			return View("PageChoice");
 		}
 

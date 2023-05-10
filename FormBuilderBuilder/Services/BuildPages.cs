@@ -7,14 +7,15 @@ namespace FormBuilderBuilder.Services
 {
 	public class BuildPages
 	{
-		public string Header = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\header.json";
-		public string Footer = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\footer.json";
-		public string Textbox = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
-		public string Textarea = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
-		public string FullContactDetails = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
-		public string OutputJSON = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Output\\Output{DateTime.Now.ToString().Replace(":","").Replace(" ", "").Replace("/", "")}.json";
-
-		public string BuildTheJson(HomeViewModel homeViewModel)
+		public string Header = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\header.json";
+		public string Footer = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\footer.json";
+		public string Textbox = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
+		public string Textarea = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
+		public string FullContactDetails = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
+        
+        public string OutputJSON = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Output\\Output{DateTime.Now.ToString().Replace(":","").Replace(" ", "").Replace("/", "")}.json";
+       // C:\code\FromBuilderBuilder\FormBuilderBuilder\JSON\Output
+        public string BuildTheJson(HomeViewModel homeViewModel)
 		{
 			using (var output = File.Create(OutputJSON))
 			{
@@ -52,7 +53,7 @@ namespace FormBuilderBuilder.Services
 			savedJSONFile = savedJSONFile.Replace("#TextboxOptional", textboxViewModel.Optional);
 			savedJSONFile = savedJSONFile.Replace("#TextboxGoPageSlug", textboxViewModel.GoPageSlug);
 
-			File.WriteAllText(OutputJSON, savedJSONFile);
+			File.WriteAllText(textboxViewModel.TheJSON, savedJSONFile);
 
 			return textboxViewModel.TheJSON;
 		}
@@ -71,7 +72,7 @@ namespace FormBuilderBuilder.Services
 			savedJSONFile = savedJSONFile.Replace("#TextareaOptional", textareaViewModel.Optional);
 			savedJSONFile = savedJSONFile.Replace("#TextareaGoPageSlug", textareaViewModel.GoPageSlug);
 
-			File.WriteAllText(OutputJSON, savedJSONFile);
+			File.WriteAllText(textareaViewModel.TheJSON, savedJSONFile);
 
 			return textareaViewModel.TheJSON;
 		}
@@ -80,5 +81,10 @@ namespace FormBuilderBuilder.Services
 		{
 			File.AppendAllText(TheJSON, File.ReadAllText(FullContactDetails));
 		}
-	}
+
+        public void BuildTheJsonFooter(string TheJSON)
+        {
+            File.AppendAllText(TheJSON, File.ReadAllText(Footer));
+        }
+    }
 }
