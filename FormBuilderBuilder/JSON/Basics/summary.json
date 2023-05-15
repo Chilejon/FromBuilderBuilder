@@ -1,0 +1,27 @@
+{
+  "Title": "Summary of answers",
+  "PageSlug": "Summary",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "Summary",
+      "Properties": {
+        "QuestionId": "summary",
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "footer"
+    }
+  ]
+},

@@ -9,7 +9,8 @@ namespace FormBuilderBuilder.Services
 	{
 		public string Header = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\header.json";
 		public string Footer = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\footer.json";
-		public string Textbox = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
+        public string Summary = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\summary.json";
+        public string Textbox = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
 		public string Textarea = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
 		public string FullContactDetails = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
         
@@ -85,6 +86,11 @@ namespace FormBuilderBuilder.Services
         public void BuildTheJsonFooter(string TheJSON)
         {
             File.AppendAllText(TheJSON, File.ReadAllText(Footer));
+        }
+
+        public void BuildTheJsonSummary(string TheJSON)
+        {
+            File.AppendAllText(TheJSON, File.ReadAllText(Summary));
         }
     }
 }

@@ -1,0 +1,24 @@
+{
+  "FormName": "adfasdf",
+  "BaseURL": "kjhlkjh",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "lkjhlkjhlkj",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "stage",
+      "IsAvailable": false
+    },
+    {
+      "Environment": "prod",
+      "IsAvailable": false
+    }
+  ],
+  "Pages": [
