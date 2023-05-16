@@ -509,3 +509,9 @@ C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Basics\summa
 C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output15052023120745.json
 C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output15052023122023.json
 C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output15052023125036.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output15052023125223.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\obj\Debug\net6.0\staticwebassets\msbuild.FormBuilderBuilder.Microsoft.AspNetCore.StaticWebAssets.props
+C:\code\FormBuilderBuilder\FormBuilderBuilder\obj\Debug\net6.0\staticwebassets\msbuild.build.FormBuilderBuilder.props
+C:\code\FormBuilderBuilder\FormBuilderBuilder\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.FormBuilderBuilder.props
+C:\code\FormBuilderBuilder\FormBuilderBuilder\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.FormBuilderBuilder.props
+C:\code\FormBuilderBuilder\FormBuilderBuilder\obj\Debug\net6.0\staticwebassets.pack.json
