@@ -84,7 +84,7 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "#FullContactDetailsGoPageSlug"
+      "PageSlug": "success"
     }
   ]
 },

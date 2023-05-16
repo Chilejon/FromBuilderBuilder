@@ -1,8 +1,8 @@
 {
-  "FormName": "afasdf",
-  "BaseURL": "dfgsdfg",
+  "FormName": "Form name",
+  "BaseURL": "form-name",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "dfgsdfg",
+  "FirstPageSlug": "what-form",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",

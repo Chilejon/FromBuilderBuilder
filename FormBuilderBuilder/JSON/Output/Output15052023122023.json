@@ -1,8 +1,8 @@
 {
-  "FormName": "afsdf",
-  "BaseURL": "asdfasdf",
+  "FormName": "Pineapple",
+  "BaseURL": "pineapple",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "asdfasdfas",
+  "FirstPageSlug": "your-favourite",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -23,19 +23,19 @@
   ],
   "Pages": [
 {
-  "Title": "asdf",
-  "PageSlug": "asdf",
+  "Title": "What is your favourite?",
+  "PageSlug": "your-favourite",
   "HideTitle": true,
   "HideBackButton": false,
   "Elements": [
     {
       "Type": "Textbox",
       "Properties": {
-        "QuestionId": "asdf",
-        "Label": "asdf",
+        "QuestionId": "favourite",
+        "Label": "What is your favourite?",
         "LabelAsH1": true,
-        "CustomValidationMessage": "sadf",
-        "Optional": "asdf"
+        "CustomValidationMessage": "enter your favourite",
+        "Optional": "false"
       }
     },
     {
@@ -49,7 +49,7 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "sadf"
+      "PageSlug": "your-details"
     }
   ]
 },
@@ -145,93 +145,34 @@
 },
   
 {
-  "Title": "What is your name?",
-  "PageSlug": "your-details",
+  "Title": "We've received your form",
+  "BannerTitle": "We've received your form",
+  "PageSlug": "success",
+  "HideBackButton": true,
   "Elements": [
     {
-      "Type": "Reusable",
+      "Type": "H2",
       "Properties": {
-        "QuestionId": "firstName"
-      },
-      "ElementRef": "firstname"
+        "Text": "What happens next"
+      }
     },
     {
-      "Type": "Reusable",
+      "Type": "p",
       "Properties": {
-        "QuestionId": "lastName"
-      },
-      "ElementRef": "lastname"
+        "Text": "You'll receive a confirmation email."
+      }
     },
     {
-      "Type": "Button",
+      "Type": "link",
       "Properties": {
-        "ButtonId": "nextStep",
-        "Text": "Continue"
+        "Text": "Go to the homepage",
+        "QuestionId": "LinkToHomePage",
+        "Url": "https://www.stockport.gov.uk/",
+        "OpenInTab": true,
+        "ClassName": "govuk-button"
       }
     }
-  ],
-  "Behaviours": [
-    {
-      "conditions": [],
-      "behaviourType": "GoToPage",
-      "PageSlug": "your-address"
-    }
   ]
-},
-      {
-        "Title": "What is your home address?",
-        "PageSlug": "your-address",
-        "Elements": [
-          {
-            "Type": "Address",
-            "Properties": {
-              "QuestionId": "address",
-              "AddressProvider": "CRM",
-              "StockportPostcode": false,
-              "MaxLength": 60
-            }
-          },
-          {
-            "Type": "Button",
-            "Properties": {
-              "ButtonId": "nextStep",
-              "Text": "Continue"
-            }
-          }
-        ],
-        "Behaviours": [
-          {
-            "conditions": [],
-            "behaviourType": "GoToPage",
-            "PageSlug": "your-contact-details"
-          }
-        ]
-      },
-      {
-        "Title": "What are your contact details?",
-        "PageSlug": "your-contact-details",
-        "Elements": [
-          {
-            "Type":"Reusable",
-            "Properties":{
-               "QuestionId":"email"
-            },
-            "ElementRef":"email"
-          },
-          {
-            "Type": "Button",
-            "Properties": {
-              "ButtonId": "nextStep",
-              "Text": "Submit"
-            }
-          }
-        ],
-        "Behaviours": [
-    {
-      "conditions": [],
-      "behaviourType": "GoToPage",
-      "PageSlug": "#FullContactDetailsGoPageSlug"
-    }
+}
   ]
-},
-  
+}

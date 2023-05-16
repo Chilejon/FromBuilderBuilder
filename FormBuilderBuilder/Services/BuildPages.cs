@@ -7,14 +7,14 @@ namespace FormBuilderBuilder.Services
 {
 	public class BuildPages
 	{
-		public string Header = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\header.json";
-		public string Footer = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\footer.json";
-        public string Summary = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\summary.json";
-        public string Textbox = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
-		public string Textarea = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
-		public string FullContactDetails = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
+		public string Header = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\header.json";
+		public string Footer = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\footer.json";
+        public string Summary = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\summary.json";
+        public string Textbox = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
+		public string Textarea = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
+		public string FullContactDetails = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
         
-        public string OutputJSON = $"C:\\code\\FromBuilderBuilder\\FormBuilderBuilder\\JSON\\Output\\Output{DateTime.Now.ToString().Replace(":","").Replace(" ", "").Replace("/", "")}.json";
+        public string OutputJSON = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Output\\Output{DateTime.Now.ToString().Replace(":","").Replace(" ", "").Replace("/", "")}.json";
        // C:\code\FromBuilderBuilder\FormBuilderBuilder\JSON\Output
         public string BuildTheJson(HomeViewModel homeViewModel)
 		{
@@ -91,6 +91,12 @@ namespace FormBuilderBuilder.Services
         public void BuildTheJsonSummary(string TheJSON)
         {
             File.AppendAllText(TheJSON, File.ReadAllText(Summary));
-        }
+
+			string savedJSONFile = File.ReadAllText(TheJSON);
+			savedJSONFile = savedJSONFile.Replace("\"PageSlug\": \"success\"", "\"PageSlug\": \"summary\"");
+
+			File.WriteAllText(TheJSON, savedJSONFile);
+		
+		}
     }
 }
