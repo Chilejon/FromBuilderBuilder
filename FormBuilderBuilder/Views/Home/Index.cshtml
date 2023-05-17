@@ -4,15 +4,21 @@
     ViewData["Title"] = "Header";
 }
 
-<hr />
+
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-fieldset__heading">
+            Form basics:
+
+        </h2>
+        </legend>
         <form asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FormNme" class="control-label"></label>
-                <input asp-for="FormNme" class="form-control" />
-                <span asp-validation-for="FormNme" class="text-danger"></span>
+                <label asp-for="FormName" class="control-label"></label>
+                <input asp-for="FormName" class="form-control" />
+                <span asp-validation-for="FormName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="BaseURL" class="control-label"></label>
@@ -24,6 +30,7 @@
                 <input asp-for="FirstPageSlug" class="form-control" />
                 <span asp-validation-for="FirstPageSlug" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

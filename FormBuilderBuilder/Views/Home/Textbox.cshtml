@@ -6,12 +6,20 @@
 
 <h1>Textbox</h1>
 
-<h4>TextboxViewModel</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <form asp-action="Textbox">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PTag" class="control-label"></label>
+                
+                <input class="govuk-input govuk-input--width-10" id="PTag" maxlength="50" name="PTag" type="text" value="">
+
+                @*<span asp-validation-for="PTag" class="text-danger"></span>*@
+            </div>
+
+            
+
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -35,13 +43,44 @@
             <div class="form-group">
                 <label asp-for="CustomValidationMessage" class="control-label"></label>
                 <input asp-for="CustomValidationMessage" class="form-control" />
-                <span asp-validation-for="CustomValidationMessage" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Optional" class="control-label"></label>
                 <input asp-for="Optional" class="form-control" />
                 <span asp-validation-for="Optional" class="text-danger"></span>
-            </div>
+            </div>*@
+            Optional 
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input"
+                           type="radio"
+                           value="true"
+                           name="Optional"
+                           id="Optional-0" />
+
+                    <label class="govuk-label govuk-radios__label"
+                           for="Optional-0">
+                        True
+                    </label>
+
+
+                </div>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input"
+                               type="radio"
+                               value="false"
+                               name="Optional"
+                               id="Optional-1" />
+
+                        <label class="govuk-label govuk-radios__label"
+                               for="Optional-1">
+                            False
+                        </label>
+
+
+                    </div>
             <div class="form-group">
                 <label asp-for="GoPageSlug" class="control-label"></label>
                 <input asp-for="GoPageSlug" class="form-control" />
@@ -51,6 +90,7 @@
 
             <input asp-for="TheJSON" hidden class="form-control" value="@Model.TheJSON" />
             @*<input type="hidden" id="TheJSON" name="TheJSON" value="@ViewBag.TheJson" />*@
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -58,9 +98,6 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

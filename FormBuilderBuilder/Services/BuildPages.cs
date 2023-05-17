@@ -9,7 +9,7 @@ namespace FormBuilderBuilder.Services
 	{
 		public string Header = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\header.json";
 		public string Footer = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\footer.json";
-        public string Summary = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\summary.json";
+        public string Endform = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\endform.json";
         public string Textbox = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
 		public string Textarea = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
 		public string FullContactDetails = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
@@ -31,7 +31,7 @@ namespace FormBuilderBuilder.Services
 			}
 
 			string savedJSONFile = File.ReadAllText(OutputJSON);
-			savedJSONFile = savedJSONFile.Replace("#FormName", homeViewModel.FormNme);
+			savedJSONFile = savedJSONFile.Replace("#FormName", homeViewModel.FormName);
 			savedJSONFile = savedJSONFile.Replace("#BaseURL", homeViewModel.BaseURL);
 			savedJSONFile = savedJSONFile.Replace("#FirstPageSlug", homeViewModel.FirstPageSlug);
 
@@ -46,6 +46,8 @@ namespace FormBuilderBuilder.Services
 			File.AppendAllText(textboxViewModel.TheJSON, File.ReadAllText(Textbox));
 
 			string savedJSONFile = File.ReadAllText(textboxViewModel.TheJSON);
+
+			savedJSONFile = savedJSONFile.Replace("#TextboxPTag", textboxViewModel.PTag);
 			savedJSONFile = savedJSONFile.Replace("#TextboxTitle", textboxViewModel.Title);
 			savedJSONFile = savedJSONFile.Replace("#TextboxPageSlug", textboxViewModel.PageSlug);
 			savedJSONFile = savedJSONFile.Replace("#TextboxQuestionID", textboxViewModel.QuestionID);
@@ -88,14 +90,14 @@ namespace FormBuilderBuilder.Services
             File.AppendAllText(TheJSON, File.ReadAllText(Footer));
         }
 
-        public void BuildTheJsonSummary(string TheJSON)
+        public void BuildTheJsonEndform(string TheJSON)
         {
-            File.AppendAllText(TheJSON, File.ReadAllText(Summary));
+            File.AppendAllText(TheJSON, File.ReadAllText(Endform));
 
-			string savedJSONFile = File.ReadAllText(TheJSON);
-			savedJSONFile = savedJSONFile.Replace("\"PageSlug\": \"success\"", "\"PageSlug\": \"summary\"");
+			//string savedJSONFile = File.ReadAllText(TheJSON);
+			//savedJSONFile = savedJSONFile.Replace("\"PageSlug\": \"success\"", "\"PageSlug\": \"summary\"");
 
-			File.WriteAllText(TheJSON, savedJSONFile);
+			//File.WriteAllText(TheJSON, savedJSONFile);
 		
 		}
     }

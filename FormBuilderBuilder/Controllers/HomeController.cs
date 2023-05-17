@@ -79,16 +79,16 @@ namespace FormBuilderBuilder.Controllers
 					ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
 					return View("PageChoice", pageChoiceViewModel);
 
-                case "Summary":
-                    BuildPages sbuildPages = new BuildPages();
-                    sbuildPages.BuildTheJsonSummary(pageChoiceViewModel.TheJSON);
+                //case "Summary":
+                //    BuildPages sbuildPages = new BuildPages();
+                //    sbuildPages.BuildTheJsonSummary(pageChoiceViewModel.TheJSON);
 
-                    ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
-                    return View("PageChoice", pageChoiceViewModel);
+                //    ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+                //    return View("PageChoice", pageChoiceViewModel);
 
-                case "Footer":
+                case "Endform":
                     BuildPages fbuildPages = new BuildPages();
-                    fbuildPages.BuildTheJsonFooter(pageChoiceViewModel.TheJSON);
+                    fbuildPages.BuildTheJsonEndform(pageChoiceViewModel.TheJSON);
 
                     ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
                     return View("PageChoice", pageChoiceViewModel);

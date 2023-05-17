@@ -5,6 +5,12 @@
   "HideBackButton": false,
   "Elements": [
     {
+      "Type": "p",
+      "Properties": {
+        "Text": "#TextboxPTag"
+      }
+    },
+    {
       "Type": "Textbox",
       "Properties": {
         "QuestionId": "#TextboxQuestionID",

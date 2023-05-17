@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c1ru7zZ9Wz4Ebz8skIt1Z3imimEAXdOkt8NZnWMp+oU=",
+  "Hash": "8Ig2UbUACekBuuuQ1H2uu/Q88zSRme2jFLFIK2ddnlY=",
   "Source": "FormBuilderBuilder",
   "BasePath": "_content/FormBuilderBuilder",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FormBuilderBuilder.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\wwwroot\\css\\form-builder.css",
+      "SourceId": "FormBuilderBuilder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\wwwroot\\",
+      "BasePath": "_content/FormBuilderBuilder",
+      "RelativePath": "css/form-builder.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\form-builder.css"
     },
     {
       "Identity": "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\wwwroot\\css\\site.css",

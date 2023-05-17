@@ -75,8 +75,7 @@
           {
             "Type": "Button",
             "Properties": {
-              "ButtonId": "nextStep",
-              "Text": "Submit"
+              "ButtonId": "nextStep"
             }
           }
         ],
@@ -84,7 +83,7 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "success"
+      "PageSlug": "summary"
     }
   ]
 },

@@ -1,8 +1,8 @@
 {
-  "FormName": "Pineapple",
-  "BaseURL": "pineapple",
+  "FormName": "stephen's form",
+  "BaseURL": "stephens-form",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "your-favourite",
+  "FirstPageSlug": "whats-for-tea",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -23,19 +23,62 @@
   ],
   "Pages": [
 {
-  "Title": "What is your favourite?",
-  "PageSlug": "your-favourite",
+  "Title": "What are you having for your tea?",
+  "PageSlug": "whats-for-tea",
   "HideTitle": true,
   "HideBackButton": false,
   "Elements": [
     {
+      "Type": "p",
+      "Properties": {
+        "Text": "Tea for us northeners is like dinner"
+      }
+    },
+    {
       "Type": "Textbox",
       "Properties": {
-        "QuestionId": "favourite",
-        "Label": "What is your favourite?",
+        "QuestionId": "whatTea",
+        "Label": "What are you having for your tea?",
         "LabelAsH1": true,
-        "CustomValidationMessage": "enter your favourite",
+        "CustomValidationMessage": "enter what your'e gonna eat",
         "Optional": "false"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "what-for-pudding"
+    }
+  ]
+},
+{
+  "Title": "What is for pudding?",
+  "PageSlug": "what-for-pudding",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "pudding",
+        "Label": "What is for pudding?",
+        "LabelAsH1": true,
+        "CustomValidationMessage": "",
+        "Optional": "true"
       }
     },
     {
@@ -130,8 +173,7 @@
           {
             "Type": "Button",
             "Properties": {
-              "ButtonId": "nextStep",
-              "Text": "Submit"
+              "ButtonId": "nextStep"
             }
           }
         ],
@@ -139,11 +181,39 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "#FullContactDetailsGoPageSlug"
+      "PageSlug": "summary"
     }
   ]
 },
   
+{
+  "Title": "Summary of answers",
+  "PageSlug": "Summary",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "Summary",
+      "Properties": {
+        "QuestionId": "summary"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep",
+        "Text": "Submit"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "success"
+    }
+  ]
+},
 {
   "Title": "We've received your form",
   "BannerTitle": "We've received your form",
