@@ -38,21 +38,76 @@
                 <input asp-for="Hint" class="form-control" />
                 <span asp-validation-for="Hint" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Optional" class="control-label"></label>
-                <input asp-for="Optional" class="form-control" />
-                <span asp-validation-for="Optional" class="text-danger"></span>
-            </div>
+            Optional
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input"
+                           type="radio"
+                           value="true"
+                           name="Optional"
+                           id="Optional-0" />
+
+                    <label class="govuk-label govuk-radios__label"
+                           for="Optional-0">
+                        True
+                    </label>
+
+
+                </div>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input"
+                               type="radio"
+                               value="false"
+                               name="Optional"
+                               id="Optional-1" />
+
+                        <label class="govuk-label govuk-radios__label"
+                               for="Optional-1">
+                            False
+                        </label>
+
+
+                    </div>
             <div class="form-group">
                 <label asp-for="MaxLength" class="control-label"></label>
                 <input asp-for="MaxLength" class="form-control" />
                 <span asp-validation-for="MaxLength" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="DisplayCharacterCount" class="control-label"></label>
-                <input asp-for="DisplayCharacterCount" class="form-control" />
-                <span asp-validation-for="DisplayCharacterCount" class="text-danger"></span>
-            </div>
+
+            DisplayCharacterCount
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input"
+                           type="radio"
+                           value="true"
+                           name="DisplayCharacterCount"
+                           id="DisplayCharacterCount-0" />
+
+                    <label class="govuk-label govuk-radios__label"
+                           for="DisplayCharacterCount-0">
+                        True
+                    </label>
+
+
+                </div>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input"
+                               type="radio"
+                               value="false"
+                               name="DisplayCharacterCount"
+                               id="DisplayCharacterCount-1" />
+
+                        <label class="govuk-label govuk-radios__label"
+                               for="DisplayCharacterCount-1">
+                            False
+                        </label>
+
+
+                    </div>
             <div class="form-group">
                 <label asp-for="GoPageSlug" class="control-label"></label>
                 <input asp-for="GoPageSlug" class="form-control" />

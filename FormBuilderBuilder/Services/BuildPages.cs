@@ -72,6 +72,11 @@ namespace FormBuilderBuilder.Services
 			savedJSONFile = savedJSONFile.Replace("#TextareaQuestionID", textareaViewModel.QuestionID);
 			savedJSONFile = savedJSONFile.Replace("#TextareaLabel", textareaViewModel.Label);
 			savedJSONFile = savedJSONFile.Replace("#TextareaCustomValidationMessage", textareaViewModel.CustomValidationMessage);
+			savedJSONFile = savedJSONFile.Replace("#TextareaDisplayCharacterCount", textareaViewModel.DisplayCharacterCount);
+			savedJSONFile = savedJSONFile.Replace("#TextareaHint", textareaViewModel.Hint);
+			savedJSONFile = savedJSONFile.Replace("#TextareaMaxLength", textareaViewModel.MaxLength.ToString());
+
+
 			savedJSONFile = savedJSONFile.Replace("#TextareaOptional", textareaViewModel.Optional);
 			savedJSONFile = savedJSONFile.Replace("#TextareaGoPageSlug", textareaViewModel.GoPageSlug);
 
