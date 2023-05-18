@@ -8,6 +8,7 @@ namespace FormBuilderBuilder.Services
 		public string Radio = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\radio.json";
         public string Endform = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\endform.json";
         public string Textbox = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
+		public string Declaration = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\declaration.json";
 		public string Textarea = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
 		public string FullContactDetails = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
         
@@ -105,6 +106,20 @@ namespace FormBuilderBuilder.Services
 			File.WriteAllText(radioViewModel.TheJSON, savedJSONFile);
 
 			return radioViewModel.TheJSON;
+		}
+
+		public string BuildTheJson(DeclarationViewModel declarationViewModel)
+		{
+
+			File.AppendAllText(declarationViewModel.TheJSON, File.ReadAllText(Declaration));
+
+			string savedJSONFile = File.ReadAllText(declarationViewModel.TheJSON);
+			savedJSONFile = savedJSONFile.Replace("#DeclarationPTag", declarationViewModel.PTag);
+			savedJSONFile = savedJSONFile.Replace("#DeclarationGoPageSlug", declarationViewModel.GoPageSlug);
+
+			File.WriteAllText(declarationViewModel.TheJSON, savedJSONFile);
+
+			return declarationViewModel.TheJSON;
 		}
 
 		public void BuildTheJson(string TheJSON)

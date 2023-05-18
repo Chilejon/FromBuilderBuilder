@@ -1,0 +1,34 @@
+{
+  "Title": "Declaration",
+  "PageSlug": "declaration",
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "#DeclarationPTag"
+      }
+    },
+    {
+      "Type": "Declaration",
+      "Properties": {
+        "Label": "Do you agree with this declaration?",
+        "QuestionId": "Declaration",
+        "CustomValidationMessage": "You must agree to the declaration to continue",
+        "Text": "I agree"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "#DeclarationGoPageSlug"
+    }
+  ]
+},

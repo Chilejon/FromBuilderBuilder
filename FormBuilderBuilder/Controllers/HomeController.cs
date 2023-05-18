@@ -81,6 +81,11 @@ namespace FormBuilderBuilder.Controllers
 					radioViewModel.TheJSON = pageChoiceViewModel.TheJSON;
 					return View(pageChoiceViewModel.PageChoice, radioViewModel);
 
+				case "Declaration":
+					DeclarationViewModel declarationViewModel = new DeclarationViewModel();
+					declarationViewModel.TheJSON = pageChoiceViewModel.TheJSON;
+					return View(pageChoiceViewModel.PageChoice, declarationViewModel);
+
 				case "FullContactDetails":
 					//BuildPages buildPages = new BuildPages();
 					_buildPages.BuildTheJson(pageChoiceViewModel.TheJSON);
@@ -157,12 +162,31 @@ namespace FormBuilderBuilder.Controllers
 			{
 				return View(radioViewModel);
 			}
-
-			
+						
 			string theJSON = _buildPages.BuildTheJson(radioViewModel);
 			ViewBag.TheJSON = radioViewModel.TheJSON;
 			return View("PageChoice");
 		}
+
+		public IActionResult Declaration(PageChoiceViewModel pageChoiceViewModel)
+		{
+			ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult Declaration(DeclarationViewModel declarationViewModel)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(declarationViewModel);
+			}
+
+			string theJSON = _buildPages.BuildTheJson(declarationViewModel);
+			ViewBag.TheJSON = declarationViewModel.TheJSON;
+			return View("PageChoice");
+		}
+
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
