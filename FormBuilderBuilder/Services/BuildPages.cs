@@ -1,21 +1,17 @@
 ﻿using FormBuilderBuilder.Models;
-using Microsoft.Build.Framework;
-using Microsoft.Extensions.Primitives;
-using Microsoft.Net.Http.Headers;
 
 namespace FormBuilderBuilder.Services
 {
 	public class BuildPages
 	{
 		public string Header = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\header.json";
-		public string Footer = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\footer.json";
+		public string Radio = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\radio.json";
         public string Endform = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\endform.json";
         public string Textbox = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
 		public string Textarea = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
 		public string FullContactDetails = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
         
         public string OutputJSON = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Output\\Output{DateTime.Now.ToString().Replace(":","").Replace(" ", "").Replace("/", "")}.json";
-       // C:\code\FromBuilderBuilder\FormBuilderBuilder\JSON\Output
         public string BuildTheJson(HomeViewModel homeViewModel)
 		{
 			using (var output = File.Create(OutputJSON))
@@ -85,15 +81,41 @@ namespace FormBuilderBuilder.Services
 			return textareaViewModel.TheJSON;
 		}
 
+		public string BuildTheJson(RadioViewModel radioViewModel)
+		{
+
+			File.AppendAllText(radioViewModel.TheJSON, File.ReadAllText(Radio));
+
+			string savedJSONFile = File.ReadAllText(radioViewModel.TheJSON);
+			savedJSONFile = savedJSONFile.Replace("#RadioTitle", radioViewModel.Title);
+			savedJSONFile = savedJSONFile.Replace("#RadioPageSlug", radioViewModel.PageSlug);
+			savedJSONFile = savedJSONFile.Replace("#RadioQuestionID", radioViewModel.QuestionID);
+			savedJSONFile = savedJSONFile.Replace("#RadioLabel", radioViewModel.Label);
+			savedJSONFile = savedJSONFile.Replace("#RadioCustomValidationMessage", radioViewModel.CustomValidationMessage);
+			savedJSONFile = savedJSONFile.Replace("#RadioHint", radioViewModel.Hint);
+
+			savedJSONFile = savedJSONFile.Replace("#RadioOption1Text", radioViewModel.Option1Text);
+			savedJSONFile = savedJSONFile.Replace("#RadioOption1Value", radioViewModel.Option1Value);
+			savedJSONFile = savedJSONFile.Replace("#RadioOption2Text", radioViewModel.Option2Text);
+			savedJSONFile = savedJSONFile.Replace("#RadioOption2Value", radioViewModel.Option2Value);
+
+			savedJSONFile = savedJSONFile.Replace("#RadioOptional", radioViewModel.Optional);
+			savedJSONFile = savedJSONFile.Replace("#RadioGoPageSlug", radioViewModel.GoPageSlug);
+
+			File.WriteAllText(radioViewModel.TheJSON, savedJSONFile);
+
+			return radioViewModel.TheJSON;
+		}
+
 		public void BuildTheJson(string TheJSON)
 		{
 			File.AppendAllText(TheJSON, File.ReadAllText(FullContactDetails));
 		}
 
-        public void BuildTheJsonFooter(string TheJSON)
-        {
-            File.AppendAllText(TheJSON, File.ReadAllText(Footer));
-        }
+        //public void BuildTheJsonFooter(string TheJSON)
+        //{
+        //    File.AppendAllText(TheJSON, File.ReadAllText(Footer));
+        //}
 
         public void BuildTheJsonEndform(string TheJSON)
         {

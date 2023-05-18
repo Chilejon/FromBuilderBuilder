@@ -1,0 +1,102 @@
+{
+  "FormName": "sdf",
+  "BaseURL": "fdgs",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "fdgs",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "stage",
+      "IsAvailable": false
+    },
+    {
+      "Environment": "prod",
+      "IsAvailable": false
+    }
+  ],
+  "Pages": [
+{
+  "Title": "fdgs",
+  "PageSlug": "fdgs",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "fdg"
+      }
+    },
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "fdgs",
+        "Label": "fdgs",
+        "LabelAsH1": true,
+        "CustomValidationMessage": "fdgs",
+        "Optional": "true"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "fdgs"
+    }
+  ]
+},
+{
+  "Title": "fdgs",
+  "PageSlug": "fdgs",
+  "HideTitle": true,
+  "Elements": [
+    {
+      "Type": "Radio",
+      "Properties": {
+        "QuestionId": "fdgs",
+        "Label": "fdgss",
+        "LabelAsH1": true,
+        "Hint": "fdgss",
+        "CustomValidationMessage": "fdgs",
+        "Optional": "true",
+        "Options": [
+          {
+            "Text": "fdgs",
+            "Value": "fdgs"
+          },
+          {
+            "Text": "fdsg",
+            "Value": "fdgs"
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "fdsg"
+    }
+  ]
+},

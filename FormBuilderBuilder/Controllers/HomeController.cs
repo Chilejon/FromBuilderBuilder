@@ -8,10 +8,12 @@ namespace FormBuilderBuilder.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
+		private readonly BuildPages _buildPages;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, BuildPages buildPages)
 		{
 			_logger = logger;
+			_buildPages = buildPages;
 		}
 
 		public IActionResult Index()
@@ -72,24 +74,22 @@ namespace FormBuilderBuilder.Controllers
 					TAviewModel.TheJSON = pageChoiceViewModel.TheJSON;
 					return View(pageChoiceViewModel.PageChoice, TAviewModel);
 
-				case "FullContactDetails":
-                    BuildPages buildPages = new BuildPages();
-                    buildPages.BuildTheJson(pageChoiceViewModel.TheJSON);
+				
 
+                case "Radio":
+					RadioViewModel radioViewModel = new RadioViewModel();
+					radioViewModel.TheJSON = pageChoiceViewModel.TheJSON;
+					return View(pageChoiceViewModel.PageChoice, radioViewModel);
+
+				case "FullContactDetails":
+					//BuildPages buildPages = new BuildPages();
+					_buildPages.BuildTheJson(pageChoiceViewModel.TheJSON);
 					ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
 					return View("PageChoice", pageChoiceViewModel);
 
-                //case "Summary":
-                //    BuildPages sbuildPages = new BuildPages();
-                //    sbuildPages.BuildTheJsonSummary(pageChoiceViewModel.TheJSON);
-
-                //    ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
-                //    return View("PageChoice", pageChoiceViewModel);
-
-                case "Endform":
-                    BuildPages fbuildPages = new BuildPages();
-                    fbuildPages.BuildTheJsonEndform(pageChoiceViewModel.TheJSON);
-
+				case "Endform":
+                    //BuildPages fbuildPages = new BuildPages();
+					_buildPages.BuildTheJsonEndform(pageChoiceViewModel.TheJSON);
                     ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
                     return View("PageChoice", pageChoiceViewModel);
 
@@ -114,8 +114,8 @@ namespace FormBuilderBuilder.Controllers
 				return View(textboxViewModel);
 			}
 
-			BuildPages buildPages = new BuildPages();
-			string theJSON = buildPages.BuildTheJson(textboxViewModel);
+			//BuildPages buildPages = new BuildPages();
+			string theJSON = _buildPages.BuildTheJson(textboxViewModel);
 
 			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel();
 			pageChoiceViewModel.TheJSON = theJSON;
@@ -138,8 +138,8 @@ namespace FormBuilderBuilder.Controllers
 				return View(textareaViewModel);
 			}
 
-			BuildPages buildPages = new BuildPages();
-			string theJSON = buildPages.BuildTheJson(textareaViewModel);
+			//BuildPages buildPages = new BuildPages();
+			string theJSON = _buildPages.BuildTheJson(textareaViewModel);
 			ViewBag.TheJSON = textareaViewModel.TheJSON;
 			return View("PageChoice");
 		}
@@ -151,15 +151,16 @@ namespace FormBuilderBuilder.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Radio(TextboxViewModel textareaViewModel)
+		public IActionResult Radio(RadioViewModel radioViewModel)
 		{
 			if (!ModelState.IsValid)
 			{
-				return View(textareaViewModel);
+				return View(radioViewModel);
 			}
 
-			BuildPages buildPages = new BuildPages();
-			string theJSON = buildPages.BuildTheJson(textareaViewModel);
+			
+			string theJSON = _buildPages.BuildTheJson(radioViewModel);
+			ViewBag.TheJSON = radioViewModel.TheJSON;
 			return View("PageChoice");
 		}
 

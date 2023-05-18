@@ -508,3 +508,10 @@ C:\code\FromBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Outpu
 C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Basics\endform.json
 C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output17052023145846.json
 C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output17052023171435.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output17052023172303.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Basics\radio.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output18052023123531.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output18052023134548.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output18052023143621.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output18052023144415.json
+C:\code\FormBuilderBuilder\FormBuilderBuilder\bin\Debug\net6.0\JSON\Output\Output18052023144803.json

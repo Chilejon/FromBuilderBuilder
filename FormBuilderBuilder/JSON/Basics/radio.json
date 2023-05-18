@@ -1,0 +1,41 @@
+{
+  "Title": "#RadioTitle",
+  "PageSlug": "#RadioPageSlug",
+  "HideTitle": true,
+  "Elements": [
+    {
+      "Type": "Radio",
+      "Properties": {
+        "QuestionId": "#RadioQuestionID",
+        "Label": "#RadioLabel",
+        "LabelAsH1": true,
+        "Hint": "#RadioHint",
+        "CustomValidationMessage": "#RadioCustomValidationMessage",
+        "Optional": "#RadioOptional",
+        "Options": [
+          {
+            "Text": "#RadioOption1Text",
+            "Value": "#RadioOption1Value"
+          },
+          {
+            "Text": "#RadioOption2Text",
+            "Value": "#RadioOption1Value"
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "#RadioGoPageSlug"
+    }
+  ]
+},

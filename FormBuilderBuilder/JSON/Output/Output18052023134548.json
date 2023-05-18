@@ -1,0 +1,196 @@
+{
+  "FormName": "sdfgsdfg",
+  "BaseURL": "sdfg-sdfgds",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "what-is-wrong",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "stage",
+      "IsAvailable": false
+    },
+    {
+      "Environment": "prod",
+      "IsAvailable": false
+    }
+  ],
+  "Pages": [
+{
+  "Title": "ewtr",
+  "PageSlug": "dsfg",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "sfdgfdgs"
+      }
+    },
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "dsfg",
+        "Label": "sdfg",
+        "LabelAsH1": true,
+        "CustomValidationMessage": "dsfg",
+        "Optional": "true"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "sdfg"
+    }
+  ]
+},
+{
+  "Title": "What is your name?",
+  "PageSlug": "your-details",
+  "Elements": [
+    {
+      "Type": "Reusable",
+      "Properties": {
+        "QuestionId": "firstName"
+      },
+      "ElementRef": "firstname"
+    },
+    {
+      "Type": "Reusable",
+      "Properties": {
+        "QuestionId": "lastName"
+      },
+      "ElementRef": "lastname"
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep",
+        "Text": "Continue"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "your-address"
+    }
+  ]
+},
+      {
+        "Title": "What is your home address?",
+        "PageSlug": "your-address",
+        "Elements": [
+          {
+            "Type": "Address",
+            "Properties": {
+              "QuestionId": "address",
+              "AddressProvider": "CRM",
+              "StockportPostcode": false,
+              "MaxLength": 60
+            }
+          },
+          {
+            "Type": "Button",
+            "Properties": {
+              "ButtonId": "nextStep",
+              "Text": "Continue"
+            }
+          }
+        ],
+        "Behaviours": [
+          {
+            "conditions": [],
+            "behaviourType": "GoToPage",
+            "PageSlug": "your-contact-details"
+          }
+        ]
+      },
+      {
+        "Title": "What are your contact details?",
+        "PageSlug": "your-contact-details",
+        "Elements": [
+          {
+            "Type":"Reusable",
+            "Properties":{
+               "QuestionId":"email"
+            },
+            "ElementRef":"email"
+          },
+          {
+            "Type": "Button",
+            "Properties": {
+              "ButtonId": "nextStep"
+            }
+          }
+        ],
+        "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "summary"
+    }
+  ]
+},
+  
+{
+  "Title": "#RadioTitle",
+  "PageSlug": "#RadioPageSlug",
+  "HideTitle": true,
+  "Elements": [
+    {
+      "Type": "Radio",
+      "Properties": {
+        "QuestionId": "#RadioQuestionID",
+        "Label": "#RadioLabel",
+        "LabelAsH1": true,
+        "Hint": "#RadioHint",
+        "CustomValidationMessage": "#RadioCustomValidationMessage",
+        "Optional": "#RadioOptional",
+        "Options": [
+          {
+            "Text": "#RadioOption1Text",
+            "Value": "#RadioOption1Value"
+          },
+          {
+            "Text": "#RadioOption2Text",
+            "Value": "#RadioOption1Value"
+          },
+          {
+            "Text": "#RadioOption3Text",
+            "Value": "#RadioOption3Value"
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "#RadioGoPageSlug"
+    }
+  ]
+},
