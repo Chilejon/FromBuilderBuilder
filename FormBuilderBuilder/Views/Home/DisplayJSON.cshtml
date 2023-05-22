@@ -1,0 +1,15 @@
+﻿@using Newtonsoft.Json
+@model FormBuilderBuilder.Models.DisplayJSONViewModel
+
+@{
+    ViewData["Title"] = "DisplayJSON";
+}
+
+<h1>Display the JSON</h1>
+
+
+<br />
+<pre>
+    @Html.Raw(Newtonsoft.Json.Linq.JValue.Parse(Model.DisplayJSON).ToString(Newtonsoft.Json.Formatting.Indented))
+</pre>
+

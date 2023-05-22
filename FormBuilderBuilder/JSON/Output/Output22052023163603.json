@@ -1,8 +1,8 @@
 {
-  "FormName": "stephen's form",
-  "BaseURL": "stephens-form",
+  "FormName": "Form name",
+  "BaseURL": "form-name",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "whats-for-tea",
+  "FirstPageSlug": "what-is-wrong",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -23,62 +23,25 @@
   ],
   "Pages": [
 {
-  "Title": "What are you having for your tea?",
-  "PageSlug": "whats-for-tea",
-  "HideTitle": true,
-  "HideBackButton": false,
+  "Title": "What is it that you want to tell us?",
+  "PageSlug": "what-is-wrong",
+  "HideTitle": false,
+  "HideBackButton": true,
   "Elements": [
     {
       "Type": "p",
       "Properties": {
-        "Text": "Tea for us northeners is like dinner"
+        "Text": "This is the opening paragrapgh"
       }
     },
     {
       "Type": "Textbox",
       "Properties": {
-        "QuestionId": "whatTea",
-        "Label": "What are you having for your tea?",
-        "LabelAsH1": true,
-        "CustomValidationMessage": "enter what your'e gonna eat",
+        "QuestionId": "whatIsWrong",
+        "Label": "What is it that you want to tell us?",
+        "LabelAsH1": false,
+        "CustomValidationMessage": "Enter the details",
         "Optional": "false"
-      }
-    },
-    {
-      "Type": "Button",
-      "Properties": {
-        "ButtonId": "nextStep"
-      }
-    }
-  ],
-  "Behaviours": [
-    {
-      "conditions": [],
-      "behaviourType": "GoToPage",
-      "PageSlug": "what-for-pudding"
-    }
-  ]
-},
-{
-  "Title": "What is for pudding?",
-  "PageSlug": "what-for-pudding",
-  "HideTitle": true,
-  "HideBackButton": false,
-  "Elements": [
-    {
-      "Type": "p",
-      "Properties": {
-        "Text": ""
-      }
-    },
-    {
-      "Type": "Textbox",
-      "Properties": {
-        "QuestionId": "pudding",
-        "Label": "What is for pudding?",
-        "LabelAsH1": true,
-        "CustomValidationMessage": "",
-        "Optional": "true"
       }
     },
     {

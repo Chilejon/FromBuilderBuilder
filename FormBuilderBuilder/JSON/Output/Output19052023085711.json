@@ -1,8 +1,8 @@
 {
-  "FormName": "sdfgsdfg",
-  "BaseURL": "sdfg-sdfgds",
+  "FormName": "Off menu",
+  "BaseURL": "off-menu",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "what-is-wrong",
+  "FirstPageSlug": "still-sparkling",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -23,25 +23,29 @@
   ],
   "Pages": [
 {
-  "Title": "ewtr",
-  "PageSlug": "dsfg",
+  "Title": "Still or sparkling?",
+  "PageSlug": "still-sparkling",
   "HideTitle": true,
-  "HideBackButton": false,
   "Elements": [
     {
-      "Type": "p",
+      "Type": "Radio",
       "Properties": {
-        "Text": "sfdgfdgs"
-      }
-    },
-    {
-      "Type": "Textbox",
-      "Properties": {
-        "QuestionId": "dsfg",
-        "Label": "sdfg",
+        "QuestionId": "stillSparkling",
+        "Label": "Still or sparkling?",
         "LabelAsH1": true,
-        "CustomValidationMessage": "dsfg",
-        "Optional": "true"
+        "Hint": "water",
+        "CustomValidationMessage": "eror",
+        "Optional": "false",
+        "Options": [
+          {
+            "Text": "Still",
+            "Value": "still"
+          },
+          {
+            "Text": "Sparkling",
+            "Value": "still"
+          }
+        ]
       }
     },
     {
@@ -55,7 +59,83 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "sdfg"
+      "PageSlug": "popp-or-bread"
+    }
+  ]
+},{
+  "Title": "Popps or bread?",
+  "PageSlug": "popp-or-bread",
+  "HideTitle": true,
+  "Elements": [
+    {
+      "Type": "Radio",
+      "Properties": {
+        "QuestionId": "pooOrBread",
+        "Label": "Popps or bread?",
+        "LabelAsH1": true,
+        "Hint": "",
+        "CustomValidationMessage": "eorrr",
+        "Optional": "false",
+        "Options": [
+          {
+            "Text": "Popadoms",
+            "Value": "popadoms"
+          },
+          {
+            "Text": "Bread",
+            "Value": "popadoms"
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "starter"
+    }
+  ]
+},{
+  "Title": "What do you want as a starter?",
+  "PageSlug": "starter",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "starter",
+        "Label": "What do you want as a starter?",
+        "LabelAsH1": true,
+        "CustomValidationMessage": "tell us your starter",
+        "Optional": "false"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "your-details"
     }
   ]
 },
@@ -150,39 +230,22 @@
 },
   
 {
-  "Title": "#RadioTitle",
-  "PageSlug": "#RadioPageSlug",
+  "Title": "Summary of answers",
+  "PageSlug": "Summary",
   "HideTitle": true,
+  "HideBackButton": false,
   "Elements": [
     {
-      "Type": "Radio",
+      "Type": "Summary",
       "Properties": {
-        "QuestionId": "#RadioQuestionID",
-        "Label": "#RadioLabel",
-        "LabelAsH1": true,
-        "Hint": "#RadioHint",
-        "CustomValidationMessage": "#RadioCustomValidationMessage",
-        "Optional": "#RadioOptional",
-        "Options": [
-          {
-            "Text": "#RadioOption1Text",
-            "Value": "#RadioOption1Value"
-          },
-          {
-            "Text": "#RadioOption2Text",
-            "Value": "#RadioOption1Value"
-          },
-          {
-            "Text": "#RadioOption3Text",
-            "Value": "#RadioOption3Value"
-          }
-        ]
+        "QuestionId": "summary"
       }
     },
     {
       "Type": "Button",
       "Properties": {
-        "ButtonId": "nextStep"
+        "ButtonId": "nextStep",
+        "Text": "Submit"
       }
     }
   ],
@@ -190,7 +253,39 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "#RadioGoPageSlug"
+      "PageSlug": "success"
     }
   ]
 },
+{
+  "Title": "We've received your form",
+  "BannerTitle": "We've received your form",
+  "PageSlug": "success",
+  "HideBackButton": true,
+  "Elements": [
+    {
+      "Type": "H2",
+      "Properties": {
+        "Text": "What happens next"
+      }
+    },
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "You'll receive a confirmation email."
+      }
+    },
+    {
+      "Type": "link",
+      "Properties": {
+        "Text": "Go to the homepage",
+        "QuestionId": "LinkToHomePage",
+        "Url": "https://www.stockport.gov.uk/",
+        "OpenInTab": true,
+        "ClassName": "govuk-button"
+      }
+    }
+  ]
+}
+  ]
+}

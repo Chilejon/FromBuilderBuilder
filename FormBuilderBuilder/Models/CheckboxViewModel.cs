@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FormBuilderBuilder.Models
 {
-	public class TextareaViewModel
+	public class CheckboxViewModel
 	{
-		[Display(Name = "Opening paragraph")]
-		public string? PTag { get; set; }
 		[Required]
 		[Display(Name = "Title")]
 		public string Title { get; set; }
@@ -21,12 +19,23 @@ namespace FormBuilderBuilder.Models
 		public string? CustomValidationMessage { get; set; }
 		[Display(Name = "Hint")]
 		public string? Hint { get; set; }
-
+		[Display(Name = "Optional")]
 		public string Optional { get; set; }
-		[Display(Name = "Max length e.g. 250")]
-		public int MaxLength { get; set; }
-		[Display(Name = "Display character count")]
-		public string DisplayCharacterCount { get; set; }
+		
+		[Display(Name = "Option 1 Text")]
+		[Required]
+		public string Option1Text { get; set; }
+		[Display(Name = "Option 1 Value")]
+		[Required]
+		public string Option1Value { get; set; }
+		[Display(Name = "Option 2 Text")]
+		[Required]
+		public string Option2Text { get; set; }
+		[Display(Name = "Option 2 Value")]
+		[Required]
+		public string Option2Value { get; set; }
+
+
 		[Display(Name = "Next page slug")]
 		[Required]
 		public string GoPageSlug { get; set; }

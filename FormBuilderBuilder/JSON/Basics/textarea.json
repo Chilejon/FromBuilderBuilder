@@ -5,6 +5,12 @@
   "HideBackButton": false,
   "Elements": [
     {
+      "Type": "p",
+      "Properties": {
+        "Text": "#TextareaPTag"
+      }
+    },
+    {
       "Type": "Textarea",
       "Properties": {
         "QuestionId": "#TextareaQuestionID",
@@ -13,8 +19,8 @@
         "Hint": "#TextareaHint",
         "CustomValidationMessage": "#TextareaCustomValidationMessage",
         "Optional": "#TextareaOptional",
-        "MaxLength": #TextareaMaxLength,
-        "DisplayCharacterCount": #TextareaDisplayCharacterCount
+        "MaxLength": "#TextareaMaxLength",
+        "DisplayCharacterCount": "#TextareaDisplayCharacterCount"
       }
     },
     {

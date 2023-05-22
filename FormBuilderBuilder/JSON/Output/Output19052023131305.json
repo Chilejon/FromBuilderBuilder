@@ -1,8 +1,8 @@
 {
-  "FormName": "Form name",
-  "BaseURL": "form-name",
+  "FormName": "fdgs",
+  "BaseURL": "fdgs",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "declaration",
+  "FirstPageSlug": "fdgs",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",

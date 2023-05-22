@@ -12,10 +12,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="PTag" class="control-label"></label>
-                
                 <input class="govuk-input govuk-input--width-10" id="PTag" maxlength="50" name="PTag" type="text" value="">
-
-                @*<span asp-validation-for="PTag" class="text-danger"></span>*@
             </div>
 
             
@@ -72,7 +69,8 @@
                                type="radio"
                                value="false"
                                name="Optional"
-                               id="Optional-1" />
+                               id="Optional-1" 
+                               checked />
 
                         <label class="govuk-label govuk-radios__label"
                                for="Optional-1">
@@ -92,7 +90,7 @@
             @*<input type="hidden" id="TheJSON" name="TheJSON" value="@ViewBag.TheJson" />*@
             <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                        <input type="submit" value="Create" class="govuk-button" />
             </div>
         </form>
     </div>

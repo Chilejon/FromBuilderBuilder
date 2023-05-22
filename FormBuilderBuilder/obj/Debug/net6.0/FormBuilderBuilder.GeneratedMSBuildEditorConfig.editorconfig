@@ -15,8 +15,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\code\FormBuilderBuilder\FormBuilderBuilder
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Checkbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja2JveC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Declaration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWNsYXJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/DisplayJSON.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5SlNPTi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/FileUpload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaWxlVXBsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Index.cshtml]

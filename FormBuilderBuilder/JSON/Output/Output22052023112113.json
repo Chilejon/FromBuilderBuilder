@@ -1,8 +1,8 @@
 {
-  "FormName": "dsfg",
-  "BaseURL": "fdsggsfd",
+  "FormName": "sfdg",
+  "BaseURL": "fdsg",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "erwt",
+  "FirstPageSlug": "fdsg",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -23,22 +23,22 @@
   ],
   "Pages": [
 {
-  "Title": "dsfa",
-  "PageSlug": "page-slug",
-  "HideTitle": true,
-  "HideBackButton": false,
+  "Title": "Declaration",
+  "PageSlug": "declaration",
   "Elements": [
     {
-      "Type": "Textarea",
+      "Type": "p",
       "Properties": {
-        "QuestionId": "afds",
-        "Label": "fdsfdsa",
-        "LabelAsH1": true,
-        "Hint": "#TextareaHint",
-        "CustomValidationMessage": "asdfasd fasdf sdfasd fsadf",
-        "Optional": "false",
-        "MaxLength": 550,
-        "DisplayCharacterCount": true
+        "Text": "fdgsfdgs"
+      }
+    },
+    {
+      "Type": "Declaration",
+      "Properties": {
+        "Label": "Do you agree with this declaration?",
+        "QuestionId": "Declaration",
+        "CustomValidationMessage": "You must agree to the declaration to continue",
+        "Text": "I agree"
       }
     },
     {
@@ -52,7 +52,7 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "duno"
+      "PageSlug": "fdgs"
     }
   ]
 },

@@ -1,8 +1,8 @@
 {
-  "FormName": "sdf",
-  "BaseURL": "fdgs",
+  "FormName": "asdf",
+  "BaseURL": "asdf",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "fdgs",
+  "FirstPageSlug": "asdfasdf",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -23,31 +23,34 @@
   ],
   "Pages": [
 {
-  "Title": "fdgs",
+  "Title": "sfdg",
   "PageSlug": "fdgs",
-  "HideTitle": true,
+  "HideTitle": false,
   "HideBackButton": false,
   "Elements": [
     {
       "Type": "p",
       "Properties": {
-        "Text": "fdg"
+        "Text": "fdgs"
       }
     },
     {
-      "Type": "Textbox",
+      "Type": "ul",
       "Properties": {
-        "QuestionId": "fdgs",
-        "Label": "fdgs",
-        "LabelAsH1": true,
-        "CustomValidationMessage": "fdgs",
-        "Optional": "true"
+        "ListItems": [ "fdgs" ]
       }
     },
     {
-      "Type": "Button",
+      "Type": "MultipleFileUpload",
       "Properties": {
-        "ButtonId": "nextStep"
+        "QuestionId": "fileUpload",
+        "TargetMapping": "File",
+        "Label": "Accepted files",
+        "AllowedFileTypes": [ ".jpg", ".jpeg", ".pdf", ".png", ".doc", ".docx" ],
+        "MaxFileSize": 5,
+        "MaxCombinedFileSize": 20,
+        "PageSubmitButtonLabel": "Continue",
+        "DisplayReCaptcha": false
       }
     }
   ],
@@ -60,29 +63,22 @@
   ]
 },
 {
-  "Title": "fdgs",
-  "PageSlug": "fdgs",
-  "HideTitle": true,
+  "Title": "Declaration",
+  "PageSlug": "declaration",
   "Elements": [
     {
-      "Type": "Radio",
+      "Type": "p",
       "Properties": {
-        "QuestionId": "fdgs",
-        "Label": "fdgss",
-        "LabelAsH1": true,
-        "Hint": "fdgss",
-        "CustomValidationMessage": "fdgs",
-        "Optional": "true",
-        "Options": [
-          {
-            "Text": "fdgs",
-            "Value": "fdgs"
-          },
-          {
-            "Text": "fdsg",
-            "Value": "fdgs"
-          }
-        ]
+        "Text": "fdgs"
+      }
+    },
+    {
+      "Type": "Declaration",
+      "Properties": {
+        "Label": "Do you agree with this declaration?",
+        "QuestionId": "Declaration",
+        "CustomValidationMessage": "You must agree to the declaration to continue",
+        "Text": "I agree"
       }
     },
     {
@@ -96,7 +92,7 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "fdsg"
+      "PageSlug": "dgsf"
     }
   ]
 },

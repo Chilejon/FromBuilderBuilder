@@ -1,6 +1,6 @@
 {
-  "FormName": "afds",
-  "BaseURL": "afdsfdsa",
+  "FormName": "Form name",
+  "BaseURL": "form-name",
   "StartPageUrl": "https://www.stockport.gov.uk",
   "FirstPageSlug": "what-is-wrong",
   "EnvironmentAvailabilities": [
@@ -23,27 +23,27 @@
   ],
   "Pages": [
 {
-  "Title": "What is wrong?",
+  "Title": "Title",
   "PageSlug": "what-is-wrong",
   "HideTitle": true,
   "Elements": [
     {
-      "Type": "Radio",
+      "Type": "Checkbox",
       "Properties": {
-        "QuestionId": "whatWrong",
-        "Label": "What is wrong?",
-        "LabelAsH1": true,
-        "Hint": "hinininsdt",
-        "CustomValidationMessage": "errorororo r",
-        "Optional": "true",
+        "QuestionId": "QuestionID",
+        "Label": "labbebel",
+        "LegendAsH1": true,
+        "Hint": "",
+        "CustomValidationMessage": "",
+        "Optional": "false",
         "Options": [
           {
-            "Text": "Me",
-            "Value": "me"
+            "Text": "Option 1 Text",
+            "Value": "Option 1 Value"
           },
           {
-            "Text": "You",
-            "Value": "me"
+            "Text": "Option 2 Text",
+            "Value": "Option 1 Value"
           }
         ]
       }

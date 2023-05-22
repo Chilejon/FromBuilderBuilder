@@ -1,0 +1,64 @@
+{
+  "FormName": "sdfg",
+  "BaseURL": "dsfgdsfg",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "dsfgsdfg",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "stage",
+      "IsAvailable": false
+    },
+    {
+      "Environment": "prod",
+      "IsAvailable": false
+    }
+  ],
+  "Pages": [
+{
+  "Title": "leUplo",
+  "PageSlug": "page-slug",
+  "HideTitle": false,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "Opening paragraph"
+      }
+    },
+    {
+      "Type": "ul",
+      "Properties": {
+        "ListItems": [ "ListItems" ]
+      }
+    },
+    {
+      "Type": "MultipleFileUpload",
+      "Properties": {
+        "QuestionId": "fileUpload",
+        "TargetMapping": "File",
+        "Label": "Accepted files",
+        "AllowedFileTypes": [ ".jpg", ".jpeg", ".pdf", ".png", ".doc", ".docx" ],
+        "MaxFileSize": 5,
+        "MaxCombinedFileSize": 20,
+        "PageSubmitButtonLabel": "Continue",
+        "DisplayReCaptcha": false
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "why-is-it"
+    }
+  ]
+},

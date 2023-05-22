@@ -1,8 +1,8 @@
 {
-  "FormName": "asfd",
-  "BaseURL": "fdsa",
+  "FormName": "dsaf",
+  "BaseURL": "sadf",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "fdsa",
+  "FirstPageSlug": "dsaf",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -23,28 +23,34 @@
   ],
   "Pages": [
 {
-  "Title": "fdgs",
+  "Title": "fdsg",
   "PageSlug": "fdgs",
-  "HideTitle": true,
+  "HideTitle": false,
   "HideBackButton": false,
   "Elements": [
     {
-      "Type": "Textarea",
+      "Type": "p",
       "Properties": {
-        "QuestionId": "fdgs",
-        "Label": "fdgs",
-        "LabelAsH1": true,
-        "Hint": "",
-        "CustomValidationMessage": "",
-        "Optional": "true",
-        "MaxLength": 4,
-        "DisplayCharacterCount": true
+        "Text": "fdgs"
       }
     },
     {
-      "Type": "Button",
+      "Type": "ul",
       "Properties": {
-        "ButtonId": "nextStep"
+        "ListItems": [ "fdgs" ]
+      }
+    },
+    {
+      "Type": "MultipleFileUpload",
+      "Properties": {
+        "QuestionId": "fileUpload",
+        "TargetMapping": "File",
+        "Label": "Accepted files",
+        "AllowedFileTypes": [ ".jpg", ".jpeg", ".pdf", ".png", ".doc", ".docx" ],
+        "MaxFileSize": 5,
+        "MaxCombinedFileSize": 20,
+        "PageSubmitButtonLabel": "Continue",
+        "DisplayReCaptcha": false
       }
     }
   ],

@@ -9,11 +9,13 @@ namespace FormBuilderBuilder.Controllers
 	{
 		private readonly ILogger<HomeController> _logger;
 		private readonly BuildPages _buildPages;
+		private readonly JSONEdits _jSONEdits;
 
-		public HomeController(ILogger<HomeController> logger, BuildPages buildPages)
+		public HomeController(ILogger<HomeController> logger, BuildPages buildPages, JSONEdits jSONEdits)
 		{
 			_logger = logger;
 			_buildPages = buildPages;
+			_jSONEdits = jSONEdits;	
 		}
 
 		public IActionResult Index()
@@ -36,7 +38,9 @@ namespace FormBuilderBuilder.Controllers
 
 			ViewBag.TheJSON = theJSON;
 
-			return View("PageChoice");
+			PageChoiceViewModel viewModel = new PageChoiceViewModel();
+			
+			return View("PageChoice", viewModel);
 		}
 
 		public IActionResult PageChoice()
@@ -54,14 +58,6 @@ namespace FormBuilderBuilder.Controllers
 				return View(pageChoiceViewModel);
 			}
 
-			
-			if(pageChoiceViewModel.PageChoice == "FullContactDetails")
-			{
-				
-			}
-
-            
-
             switch (pageChoiceViewModel.PageChoice)
 			{
 				case "Textbox":
@@ -74,17 +70,25 @@ namespace FormBuilderBuilder.Controllers
 					TAviewModel.TheJSON = pageChoiceViewModel.TheJSON;
 					return View(pageChoiceViewModel.PageChoice, TAviewModel);
 
-				
-
                 case "Radio":
 					RadioViewModel radioViewModel = new RadioViewModel();
 					radioViewModel.TheJSON = pageChoiceViewModel.TheJSON;
 					return View(pageChoiceViewModel.PageChoice, radioViewModel);
 
+				case "Checkbox":
+					CheckboxViewModel checkboxViewModel = new CheckboxViewModel();
+					checkboxViewModel.TheJSON = pageChoiceViewModel.TheJSON;
+					return View(pageChoiceViewModel.PageChoice, checkboxViewModel);
+
 				case "Declaration":
 					DeclarationViewModel declarationViewModel = new DeclarationViewModel();
 					declarationViewModel.TheJSON = pageChoiceViewModel.TheJSON;
 					return View(pageChoiceViewModel.PageChoice, declarationViewModel);
+
+				case "FileUpload":
+					FileUploadViewModel fileUploadViewModel = new FileUploadViewModel();
+					fileUploadViewModel.TheJSON = pageChoiceViewModel.TheJSON;
+					return View(pageChoiceViewModel.PageChoice, fileUploadViewModel);
 
 				case "FullContactDetails":
 					//BuildPages buildPages = new BuildPages();
@@ -96,6 +100,7 @@ namespace FormBuilderBuilder.Controllers
                     //BuildPages fbuildPages = new BuildPages();
 					_buildPages.BuildTheJsonEndform(pageChoiceViewModel.TheJSON);
                     ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+					pageChoiceViewModel.ShowOptions = false;
                     return View("PageChoice", pageChoiceViewModel);
 
                 default:
@@ -122,10 +127,9 @@ namespace FormBuilderBuilder.Controllers
 			//BuildPages buildPages = new BuildPages();
 			string theJSON = _buildPages.BuildTheJson(textboxViewModel);
 
-			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel();
-			pageChoiceViewModel.TheJSON = theJSON;
 
 			ViewBag.TheJSON = textboxViewModel.TheJSON;
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
 			return View("PageChoice", pageChoiceViewModel);
 		}
 
@@ -146,7 +150,8 @@ namespace FormBuilderBuilder.Controllers
 			//BuildPages buildPages = new BuildPages();
 			string theJSON = _buildPages.BuildTheJson(textareaViewModel);
 			ViewBag.TheJSON = textareaViewModel.TheJSON;
-			return View("PageChoice");
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+			return View("PageChoice", pageChoiceViewModel);
 		}
 
 		public IActionResult Radio(PageChoiceViewModel pageChoiceViewModel)
@@ -165,7 +170,28 @@ namespace FormBuilderBuilder.Controllers
 						
 			string theJSON = _buildPages.BuildTheJson(radioViewModel);
 			ViewBag.TheJSON = radioViewModel.TheJSON;
-			return View("PageChoice");
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+			return View("PageChoice", pageChoiceViewModel);
+		}
+
+		public IActionResult Checkbox(PageChoiceViewModel pageChoiceViewModel)
+		{
+			ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult Checkbox(CheckboxViewModel checkboxViewModel)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(checkboxViewModel);
+			}
+
+			string theJSON = _buildPages.BuildTheJson(checkboxViewModel);
+			ViewBag.TheJSON = checkboxViewModel.TheJSON;
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+			return View("PageChoice", pageChoiceViewModel);
 		}
 
 		public IActionResult Declaration(PageChoiceViewModel pageChoiceViewModel)
@@ -184,7 +210,41 @@ namespace FormBuilderBuilder.Controllers
 
 			string theJSON = _buildPages.BuildTheJson(declarationViewModel);
 			ViewBag.TheJSON = declarationViewModel.TheJSON;
-			return View("PageChoice");
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+			return View("PageChoice", pageChoiceViewModel);
+		}
+
+		public IActionResult FileUpload(PageChoiceViewModel pageChoiceViewModel)
+		{
+			ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult FileUpload(FileUploadViewModel fileUploadViewModel)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(fileUploadViewModel);
+			}
+
+			//BuildPages buildPages = new BuildPages();
+			string theJSON = _buildPages.BuildTheJson(fileUploadViewModel);
+			ViewBag.TheJSON = fileUploadViewModel.TheJSON;
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+			return View("PageChoice", pageChoiceViewModel);
+		}
+
+		public IActionResult DisplayJSON(string TheLink)
+		{
+			//ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
+
+			DisplayJSONViewModel viewModel = new DisplayJSONViewModel();
+			viewModel.DisplayJSON = _jSONEdits.ReadJSON(TheLink);
+			viewModel.TheJSON =TheLink;
+
+
+			return View(viewModel);
 		}
 
 

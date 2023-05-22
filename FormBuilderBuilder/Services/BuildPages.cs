@@ -6,10 +6,12 @@ namespace FormBuilderBuilder.Services
 	{
 		public string Header = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\header.json";
 		public string Radio = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\radio.json";
-        public string Endform = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\endform.json";
+		public string Checkbox = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\checkbox.json";
+		public string Endform = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\endform.json";
         public string Textbox = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textbox.json";
 		public string Declaration = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\declaration.json";
 		public string Textarea = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\textarea.json";
+		public string FileUpload = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fileupload.json";
 		public string FullContactDetails = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Basics\\fullcontactdetails.json";
         
         public string OutputJSON = $"C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\JSON\\Output\\Output{DateTime.Now.ToString().Replace(":","").Replace(" ", "").Replace("/", "")}.json";
@@ -64,6 +66,7 @@ namespace FormBuilderBuilder.Services
 			File.AppendAllText(textareaViewModel.TheJSON, File.ReadAllText(Textarea));
 
 			string savedJSONFile = File.ReadAllText(textareaViewModel.TheJSON);
+			savedJSONFile = savedJSONFile.Replace("#TextareaPTag", textareaViewModel.PTag);
 			savedJSONFile = savedJSONFile.Replace("#TextareaTitle", textareaViewModel.Title);
 			savedJSONFile = savedJSONFile.Replace("#TextareaPageSlug", textareaViewModel.PageSlug);
 			savedJSONFile = savedJSONFile.Replace("#TextareaQuestionID", textareaViewModel.QuestionID);
@@ -108,6 +111,32 @@ namespace FormBuilderBuilder.Services
 			return radioViewModel.TheJSON;
 		}
 
+		public string BuildTheJson(CheckboxViewModel checkboxViewModel)
+		{
+
+			File.AppendAllText(checkboxViewModel.TheJSON, File.ReadAllText(Checkbox));
+
+			string savedJSONFile = File.ReadAllText(checkboxViewModel.TheJSON);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxTitle", checkboxViewModel.Title);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxPageSlug", checkboxViewModel.PageSlug);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxQuestionID", checkboxViewModel.QuestionID);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxLabel", checkboxViewModel.Label);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxCustomValidationMessage", checkboxViewModel.CustomValidationMessage);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxHint", checkboxViewModel.Hint);
+
+			savedJSONFile = savedJSONFile.Replace("#CheckboxOption1Text", checkboxViewModel.Option1Text);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxOption1Value", checkboxViewModel.Option1Value);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxOption2Text", checkboxViewModel.Option2Text);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxOption2Value", checkboxViewModel.Option2Value);
+
+			savedJSONFile = savedJSONFile.Replace("#CheckboxOptional", checkboxViewModel.Optional);
+			savedJSONFile = savedJSONFile.Replace("#CheckboxGoPageSlug", checkboxViewModel.GoPageSlug);
+
+			File.WriteAllText(checkboxViewModel.TheJSON, savedJSONFile);
+
+			return checkboxViewModel.TheJSON;
+		}
+
 		public string BuildTheJson(DeclarationViewModel declarationViewModel)
 		{
 
@@ -120,6 +149,23 @@ namespace FormBuilderBuilder.Services
 			File.WriteAllText(declarationViewModel.TheJSON, savedJSONFile);
 
 			return declarationViewModel.TheJSON;
+		}
+
+		public string BuildTheJson(FileUploadViewModel fileUploadViewModel)
+		{
+
+			File.AppendAllText(fileUploadViewModel.TheJSON, File.ReadAllText(FileUpload));
+
+			string savedJSONFile = File.ReadAllText(fileUploadViewModel.TheJSON);
+			savedJSONFile = savedJSONFile.Replace("#FileUploadTitle", fileUploadViewModel.Title);
+			savedJSONFile = savedJSONFile.Replace("#FileUploadPageSlug", fileUploadViewModel.PageSlug);
+			savedJSONFile = savedJSONFile.Replace("#FileUploadListItems", fileUploadViewModel.ListItems);
+			savedJSONFile = savedJSONFile.Replace("#FileUploadPTag", fileUploadViewModel.PTag);
+			savedJSONFile = savedJSONFile.Replace("#FileUploadGoPageSlug", fileUploadViewModel.GoPageSlug);
+
+			File.WriteAllText(fileUploadViewModel.TheJSON, savedJSONFile);
+
+			return fileUploadViewModel.TheJSON;
 		}
 
 		public void BuildTheJson(string TheJSON)

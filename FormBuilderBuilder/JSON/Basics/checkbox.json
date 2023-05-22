@@ -1,0 +1,41 @@
+{
+  "Title": "#CheckboxTitle",
+  "PageSlug": "#CheckboxPageSlug",
+  "HideTitle": true,
+  "Elements": [
+    {
+      "Type": "Checkbox",
+      "Properties": {
+        "QuestionId": "#CheckboxQuestionID",
+        "Label": "#CheckboxLabel",
+        "LegendAsH1": true,
+        "Hint": "#CheckboxHint",
+        "CustomValidationMessage": "#CheckboxCustomValidationMessage",
+        "Optional": "#CheckboxOptional",
+        "Options": [
+          {
+            "Text": "#CheckboxOption1Text",
+            "Value": "#CheckboxOption1Value"
+          },
+          {
+            "Text": "#CheckboxOption2Text",
+            "Value": "#CheckboxOption1Value"
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "#CheckboxGoPageSlug"
+    }
+  ]
+},

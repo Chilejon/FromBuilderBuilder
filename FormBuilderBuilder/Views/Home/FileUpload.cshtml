@@ -1,17 +1,35 @@
-﻿@model FormBuilderBuilder.Models.DeclarationViewModel
+﻿@model FormBuilderBuilder.Models.FileUploadViewModel
 
 @{
-    ViewData["Title"] = "Declaration";
+    ViewData["Title"] = "FileUpload";
 }
+
+<h1>FileUpload</h1>
+
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="Declaration">
+        <form asp-action="FileUpload">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PageSlug" class="control-label"></label>
+                <input asp-for="PageSlug" class="form-control" />
+                <span asp-validation-for="PageSlug" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="PTag" class="control-label"></label>
                 <input asp-for="PTag" class="form-control" />
                 <span asp-validation-for="PTag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ListItems" class="control-label"></label>
+                <input asp-for="ListItems" class="form-control" />
+                <span asp-validation-for="ListItems" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="GoPageSlug" class="control-label"></label>

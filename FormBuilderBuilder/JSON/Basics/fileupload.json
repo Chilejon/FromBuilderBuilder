@@ -1,0 +1,40 @@
+{
+  "Title": "#FileUploadTitle",
+  "PageSlug": "#FileUploadPageSlug",
+  "HideTitle": false,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "#FileUploadPTag"
+      }
+    },
+    {
+      "Type": "ul",
+      "Properties": {
+        "ListItems": [ "#FileUploadListItems" ]
+      }
+    },
+    {
+      "Type": "MultipleFileUpload",
+      "Properties": {
+        "QuestionId": "fileUpload",
+        "TargetMapping": "File",
+        "Label": "Accepted files",
+        "AllowedFileTypes": [ ".jpg", ".jpeg", ".pdf", ".png", ".doc", ".docx" ],
+        "MaxFileSize": 5,
+        "MaxCombinedFileSize": 20,
+        "PageSubmitButtonLabel": "Continue",
+        "DisplayReCaptcha": false
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "#FileUploadGoPageSlug"
+    }
+  ]
+},

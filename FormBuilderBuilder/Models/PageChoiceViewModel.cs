@@ -6,6 +6,7 @@ namespace FormBuilderBuilder.Models
 	{
 		[Required]
 		public string PageChoice { get; set; }
+		public bool ShowOptions { get; set; } = true;
 		public string TheJSON {  get; set; }
 	}
 }

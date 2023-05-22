@@ -1,8 +1,8 @@
 {
-  "FormName": "Form name",
-  "BaseURL": "form-name",
+  "FormName": "dsfg",
+  "BaseURL": "dsfg",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "declaration",
+  "FirstPageSlug": "dsfg",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -22,77 +22,6 @@
     }
   ],
   "Pages": [
-{
-  "Title": "Declaration",
-  "PageSlug": "declaration",
-  "Elements": [
-    {
-      "Type": "p",
-      "Properties": {
-        "Text": "This is something tomtomotmomotmdfdsfg dsfg dsfg dsfg sdfg sdfg sdfg sdfg  dsfg"
-      }
-    },
-    {
-      "Type": "Declaration",
-      "Properties": {
-        "Label": "Do you agree with this declaration?",
-        "QuestionId": "Declaration",
-        "CustomValidationMessage": "You must agree to the declaration to continue",
-        "Text": "I agree"
-      }
-    },
-    {
-      "Type": "Button",
-      "Properties": {
-        "ButtonId": "nextStep"
-      }
-    }
-  ],
-  "Behaviours": [
-    {
-      "conditions": [],
-      "behaviourType": "GoToPage",
-      "PageSlug": "why-is-it"
-    }
-  ]
-},
-{
-  "Title": "What is it that you want to tell us?",
-  "PageSlug": "why-is-it",
-  "HideTitle": true,
-  "HideBackButton": false,
-  "Elements": [
-    {
-      "Type": "p",
-      "Properties": {
-        "Text": ""
-      }
-    },
-    {
-      "Type": "Textbox",
-      "Properties": {
-        "QuestionId": "why",
-        "Label": "What is it that you want to tell us?",
-        "LabelAsH1": true,
-        "CustomValidationMessage": "",
-        "Optional": "false"
-      }
-    },
-    {
-      "Type": "Button",
-      "Properties": {
-        "ButtonId": "nextStep"
-      }
-    }
-  ],
-  "Behaviours": [
-    {
-      "conditions": [],
-      "behaviourType": "GoToPage",
-      "PageSlug": "your-details"
-    }
-  ]
-},
 {
   "Title": "What is your name?",
   "PageSlug": "your-details",
