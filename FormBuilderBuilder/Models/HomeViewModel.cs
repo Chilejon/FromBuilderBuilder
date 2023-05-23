@@ -11,7 +11,7 @@ namespace FormBuilderBuilder.Models
 		[Required]
 		[DisplayName("Url e.g. form-name")]
 		public string BaseURL { get; set; }
-		[DisplayName("First page slug e.g. what-is-wrong")]
+		[DisplayName("First page slug e.g. make-a-choice")]
 		public string FirstPageSlug { get; set; }
 	}
 }

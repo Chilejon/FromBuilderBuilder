@@ -8,10 +8,10 @@
 <div class="row">
     <div class="col-md-6">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h2 class="govuk-fieldset__heading">
-            Form basics:
+            <h2 class="govuk-fieldset__heading">
+                Form basics:
 
-        </h2>
+            </h2>
         </legend>
         <form asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -38,3 +38,14 @@
     </div>
 </div>
 
+<script>
+
+    window.onload = function () {
+        var src = document.getElementById("FormName"),
+            dst = document.getElementById("BaseURL");
+        src.addEventListener('input', function () {
+            dst.value = src.value.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-");
+
+        });
+    };
+</script>

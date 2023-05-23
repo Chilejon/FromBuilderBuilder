@@ -9,7 +9,7 @@ namespace FormBuilderBuilder.Models
 		[Display(Name = "Title")]
 		public string Title { get; set; }
 		[Required]
-		[Display(Name = "Page slug e.g. page-slug")]
+		[Display(Name = "Page slug e.g. make-a-choice")]
 		public string PageSlug { get; set; }
 		[Required]
 		public string QuestionID { get; set; }

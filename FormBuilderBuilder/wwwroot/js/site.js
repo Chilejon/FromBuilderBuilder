@@ -1,17 +1,23 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var ttl = document.getElementById("Title"),
+    lbl = document.getElementById("Label");
+    pgslg = document.getElementById("PageSlug");
+    qstnid = document.getElementById("QuestionID");
+    src = document.getElementById("FormName"),
+    dst = document.getElementById("BaseURL");
 
-// Write your JavaScript code.
-function ClearSurgery()
-{
 
-	document.getElementById("Surgery").value= "";
 
-}
+src.addEventListener('input', function () {
+    dst.value = src.value.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-");
 
-function ClearPostcode()
-{
+});
 
-	document.getElementById("Postcode").value= "";
+ttl.addEventListener('input', function () {
+    lbl.value = ttl.value;
+});
 
-}
+pgslg.addEventListener('input', function () {
+    qstnid.value = pgslg.value.replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "");
+});
+
+
