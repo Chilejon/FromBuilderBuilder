@@ -9,77 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FormBuilderBuilder
 build_property.RootNamespace = FormBuilderBuilder
-build_property.ProjectDir = C:\code\FormBuilderBuilder\FormBuilderBuilder\
+build_property.ProjectDir = C:\Code\FormBuilderBuilder\FormBuilderBuilder\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\code\FormBuilderBuilder\FormBuilderBuilder
+build_property.MSBuildProjectDirectory = C:\Code\FormBuilderBuilder\FormBuilderBuilder
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Checkbox.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Checkbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja2JveC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Declaration.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Declaration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWNsYXJhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/DisplayJSON.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/DisplayJSON.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5SlNPTi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/FileUpload.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/FileUpload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaWxlVXBsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Index.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/PageChoice.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/PageChoice.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYWdlQ2hvaWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Privacy.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Radio.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Radio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSYWRpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Textarea.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Textarea.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXh0YXJlYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Textbox.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Home/Textbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXh0Ym94LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/Error.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/Footer.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/Header.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/_ViewImports.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/_ViewStart.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/_Layout.cshtml]
+[C:/Code/FormBuilderBuilder/FormBuilderBuilder/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2r31rftbnx

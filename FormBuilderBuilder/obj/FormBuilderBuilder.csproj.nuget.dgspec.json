@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\FormBuilderBuilder.csproj": {}
+    "C:\\Code\\FormBuilderBuilder\\FormBuilderBuilder\\FormBuilderBuilder.csproj": {}
   },
   "projects": {
-    "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\FormBuilderBuilder.csproj": {
+    "C:\\Code\\FormBuilderBuilder\\FormBuilderBuilder\\FormBuilderBuilder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\FormBuilderBuilder.csproj",
+        "projectUniqueName": "C:\\Code\\FormBuilderBuilder\\FormBuilderBuilder\\FormBuilderBuilder.csproj",
         "projectName": "FormBuilderBuilder",
-        "projectPath": "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\FormBuilderBuilder.csproj",
-        "packagesPath": "C:\\Users\\JonC\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\FormBuilderBuilder\\FormBuilderBuilder\\obj\\",
+        "projectPath": "C:\\Code\\FormBuilderBuilder\\FormBuilderBuilder\\FormBuilderBuilder.csproj",
+        "packagesPath": "C:\\Users\\jon.chiles\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\FormBuilderBuilder\\FormBuilderBuilder\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\JonC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jon.chiles\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

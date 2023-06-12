@@ -43,10 +43,11 @@ namespace FormBuilderBuilder.Controllers
 			return View("PageChoice", viewModel);
 		}
 
-		public IActionResult PageChoice()
+		public IActionResult PageChoice(string TheJSON)
 		{
 			// heading details
 			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel();
+			pageChoiceViewModel.TheJSON = TheJSON;
 			return View(pageChoiceViewModel);
 		}
 
@@ -57,6 +58,8 @@ namespace FormBuilderBuilder.Controllers
 			{
 				return View(pageChoiceViewModel);
 			}
+
+			ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
 
             switch (pageChoiceViewModel.PageChoice)
 			{
@@ -242,13 +245,31 @@ namespace FormBuilderBuilder.Controllers
 			DisplayJSONViewModel viewModel = new DisplayJSONViewModel();
 			viewModel.DisplayJSON = _jSONEdits.ReadJSON(TheLink);
 			viewModel.TheJSON =TheLink;
+            ViewBag.TheJSON = TheLink;
 
-
-			return View(viewModel);
+            return View(viewModel);
 		}
 
+        [HttpPost]
+        public IActionResult DisplayJSON(DisplayJSONViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(viewModel);
+            }
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+            _jSONEdits.RewriteJSON(viewModel);
+
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel();
+			pageChoiceViewModel.ShowOptions = false;
+			pageChoiceViewModel.TheJSON = viewModel.TheJSON;
+            ViewBag.TheJSON = viewModel.TheJSON;
+
+            return View("PageChoice", pageChoiceViewModel);
+        }
+
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

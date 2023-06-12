@@ -12,5 +12,10 @@ namespace FormBuilderBuilder.Services
 
 			return readText;
 		}
+
+        public void RewriteJSON(DisplayJSONViewModel viewModel)
+        {
+            File.WriteAllText(viewModel.TheJSON, viewModel.DisplayJSON);
+        }
     }
 }

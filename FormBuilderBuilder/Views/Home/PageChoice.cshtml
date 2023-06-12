@@ -168,133 +168,7 @@
 
 
 
-@*<div class="row">
-    <div class="col-md-6">
-
-        <form asp-action="PageChoice">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-            <div class="form-group">
-
-                <fieldset class="govuk-fieldset">
-
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h2 class="govuk-fieldset__heading">
-                            Add a page:
-
-                        </h2>
-                    </legend>
-
-                    <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input"
-                                   type="radio"
-                                   value="Textbox"
-                                   name="PageChoice"
-                                   id="PageChoice-0" />
-
-                            <label class="govuk-label govuk-radios__label"
-                                   for="PageChoice-0">
-                                Textbox
-                            </label>
-
-                        </div>
-                    </div>
-
-
-                    <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input"
-                                   type="radio"
-                                   value="TextArea"
-                                   name="PageChoice"
-                                   id="PageChoice-1" />
-
-                            <label class="govuk-label govuk-radios__label"
-                                   for="PageChoice-1">
-                                TextArea
-                            </label>
-
-                        </div>
-                    </div>
-
-                    <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input"
-                                   type="radio"
-                                   value="Radio"
-                                   name="PageChoice"
-                                   id="PageChoice-2" />
-
-                            <label class="govuk-label govuk-radios__label"
-                                   for="PageChoice-2">
-                                Radio
-                            </label>
-
-                        </div>
-                    </div>
-
-                    <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input"
-                                   type="radio"
-                                   value="Declaration"
-                                   name="PageChoice"
-                                   id="PageChoice-3" />
-
-                            <label class="govuk-label govuk-radios__label"
-                                   for="PageChoice-3">
-                                Declaration
-                            </label>
-
-                        </div>
-                    </div>
-
-                    <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input"
-                                   type="radio"
-                                   value="FullContactDetails"
-                                   name="PageChoice"
-                                   id="PageChoice-98" />
-
-                            <label class="govuk-label govuk-radios__label"
-                                   for="PageChoice-98">
-                                Full Contact Details
-                            </label>
-
-                        </div>
-                    </div>
-                    <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input"
-                                   type="radio"
-                                   value="Endform"
-                                   name="PageChoice"
-                                   id="PageChoice-99" />
-
-                            <label class="govuk-label govuk-radios__label"
-                                   for="PageChoice-99">
-                                End form
-                            </label>
-                        </div>
-                    </div>
-
-                    <input asp-for="TheJSON" hidden class="form-control" value="@ViewBag.TheJson" />
-
-                    <span asp-validation-for="PageChoice" class="text-danger"></span>
-
-                    <br />
-                    <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
-                    </div>
-
-                </fieldset>
-            </div>
-
-
-        </form>
-    </div>*@
+@**@
 
 
     <label class="govuk-label">
@@ -305,7 +179,25 @@
     <a href="https://qa-formbuilder-origin.smbcdigital.net/preview" target="_blank"> Preview</a>
 
 
-@*</div>
+@*
+
+generic-form-pdf
+
+    submit and email properties
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+
+
+
+   "Behaviours": [
+          {
+            "conditions": [],
+            "behaviourType": "SubmitAndEmail",
+            "PageSlug": "success"
+          }
+        ]
+
 *@
 
 @section Scripts {

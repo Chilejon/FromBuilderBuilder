@@ -1,0 +1,177 @@
+{
+  "FormName": "sadf",
+  "BaseURL": "generic-form",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "sadf-sadf",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "stage",
+      "IsAvailable": false
+    },
+    {
+      "Environment": "prod",
+      "IsAvailable": false
+    }
+  ],
+  "Pages": [
+{
+  "Title": "What is your name?",
+  "PageSlug": "your-details",
+  "Elements": [
+    {
+      "Type": "Reusable",
+      "Properties": {
+        "QuestionId": "firstName"
+      },
+      "ElementRef": "firstname"
+    },
+    {
+      "Type": "Reusable",
+      "Properties": {
+        "QuestionId": "lastName"
+      },
+      "ElementRef": "lastname"
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep",
+        "Text": "Continue"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "your-address"
+    }
+  ]
+},
+      {
+        "Title": "What is your home address?",
+        "PageSlug": "your-address",
+        "Elements": [
+          {
+            "Type": "Address",
+            "Properties": {
+              "QuestionId": "address",
+              "AddressProvider": "CRM",
+              "StockportPostcode": false,
+              "MaxLength": 60
+            }
+          },
+          {
+            "Type": "Button",
+            "Properties": {
+              "ButtonId": "nextStep",
+              "Text": "Continue"
+            }
+          }
+        ],
+        "Behaviours": [
+          {
+            "conditions": [],
+            "behaviourType": "GoToPage",
+            "PageSlug": "your-contact-details"
+          }
+        ]
+      },
+      {
+        "Title": "What are your contact details?",
+        "PageSlug": "your-contact-details",
+        "Elements": [
+          {
+            "Type":"Reusable",
+            "Properties":{
+               "QuestionId":"email"
+            },
+            "ElementRef":"email"
+          },
+          {
+            "Type": "Button",
+            "Properties": {
+              "ButtonId": "nextStep"
+            }
+          }
+        ],
+        "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "summary"
+    }
+  ]
+},
+  
+{
+  "Title": "Summary of answers",
+  "PageSlug": "Summary",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "Summary",
+      "Properties": {
+        "QuestionId": "summary"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep",
+        "Text": "Submit"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "SubmitAndEmail",
+      "PageSlug": "success"
+    }
+  ]
+},
+{
+  "Title": "We've received your form",
+  "BannerTitle": "We've received your form",
+  "PageSlug": "success",
+  "HideBackButton": true,
+  "Elements": [
+    {
+      "Type": "H2",
+      "Properties": {
+        "Text": "What happens next"
+      }
+    },
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "#SuccessPTag"
+      }
+    },
+    {
+      "Type": "link",
+      "Properties": {
+        "Text": "Go to the homepage",
+        "QuestionId": "LinkToHomePage",
+        "Url": "https://www.stockport.gov.uk/",
+        "OpenInTab": true,
+        "ClassName": "govuk-button"
+      }
+    }
+  ]
+}
+  ]
+}
