@@ -16,8 +16,9 @@
         "QuestionId": "#TextboxQuestionID",
         "Label": "#TextboxLabel",
         "LabelAsH1": true,
+        "Hint": "#TextboxHint",
         "CustomValidationMessage": "#TextboxCustomValidationMessage",
-        "Optional": "#TextboxOptional"
+        "Optional": #TextboxOptional
       }
     },
     {

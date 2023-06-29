@@ -4,6 +4,12 @@
   "HideTitle": true,
   "Elements": [
     {
+      "Type": "p",
+      "Properties": {
+        "Text": "#RadioPTag"
+      }
+    },
+    {
       "Type": "Radio",
       "Properties": {
         "QuestionId": "#RadioQuestionID",

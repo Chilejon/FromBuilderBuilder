@@ -1,8 +1,11 @@
 {
-  "FormName": "dsaf",
-  "BaseURL": "sadf",
+  "FormName": "sdfg",
+  "BaseURL": "sdfg",
   "StartPageUrl": "https://www.stockport.gov.uk",
-  "FirstPageSlug": "dsaf",
+  "FirstPageSlug": "sfdg",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
   "EnvironmentAvailabilities": [
     {
       "Environment": "int",
@@ -11,33 +14,25 @@
     {
       "Environment": "qa",
       "IsAvailable": true
-    },
-    {
-      "Environment": "stage",
-      "IsAvailable": false
-    },
-    {
-      "Environment": "prod",
-      "IsAvailable": false
     }
   ],
   "Pages": [
 {
-  "Title": "fdsg",
-  "PageSlug": "fdgs",
+  "Title": "sdgffdgs",
+  "PageSlug": "fdgsdfgs",
   "HideTitle": false,
   "HideBackButton": false,
   "Elements": [
     {
       "Type": "p",
       "Properties": {
-        "Text": "fdgs"
+        "Text": ""
       }
     },
     {
       "Type": "ul",
       "Properties": {
-        "ListItems": [ "fdgs" ]
+        "ListItems": [ "sfdg sdfg " ]
       }
     },
     {
@@ -58,7 +53,7 @@
     {
       "conditions": [],
       "behaviourType": "GoToPage",
-      "PageSlug": "fdsg"
+      "PageSlug": "ffgsdfg "
     }
   ]
 },

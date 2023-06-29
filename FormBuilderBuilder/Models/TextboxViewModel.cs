@@ -18,7 +18,9 @@ namespace FormBuilderBuilder.Models
 		[Required]
 		[Display(Name = "Question label e.g. What is it that you want to tell us?")]
 		public string Label { get; set; }
-		[Display(Name = "Validation message e.g. Enter the details")]
+        [Display(Name = "Hint")]
+        public string? Hint { get; set; }
+        [Display(Name = "Validation message e.g. Enter the details")]
 		public string? CustomValidationMessage { get; set; }
 		
 		public string Optional { get; set; }

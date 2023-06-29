@@ -4,6 +4,12 @@
   "HideTitle": true,
   "Elements": [
     {
+      "Type": "p",
+      "Properties": {
+        "Text": "#CheckboxPTag"
+      }
+    },
+    {
       "Type": "Checkbox",
       "Properties": {
         "QuestionId": "#CheckboxQuestionID",

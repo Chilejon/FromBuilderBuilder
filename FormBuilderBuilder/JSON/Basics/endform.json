@@ -21,8 +21,27 @@
   "Behaviours": [
     {
       "conditions": [],
-      "behaviourType": "SubmitAndEmail",
-      "PageSlug": "success"
+      "behaviourType": "SubmitForm",
+      "SubmitSlugs": [
+        {
+          "Environment": "local",
+          "URL": "https://prod-02.westeurope",
+          "AuthToken": "TestToken",
+          "Type": "flowtoken"
+        },
+        {
+          "Environment": "Int",
+          "URL": "https://prod-02.westeurope",
+          "AuthToken": "TestToken",
+          "Type": "flowtoken"
+        },
+        {
+          "Environment": "QA",
+          "URL": "https://prod-02.westeurope.logic.azure.com:443/workflows/be58841bfa1b415294594e747d58216f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O-WYX0zagjM3Vo5fbnagiDFlNOcr5lwpA9A3PUPentc",
+          "AuthToken": "TestToken",
+          "Type": "flowtoken"
+        }
+      ]
     }
   ]
 },

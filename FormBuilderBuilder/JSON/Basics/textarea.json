@@ -18,9 +18,9 @@
         "LabelAsH1": true,
         "Hint": "#TextareaHint",
         "CustomValidationMessage": "#TextareaCustomValidationMessage",
-        "Optional": "#TextareaOptional",
+        "Optional": #TextareaOptional,
         "MaxLength": "#TextareaMaxLength",
-        "DisplayCharacterCount": "#TextareaDisplayCharacterCount"
+        "DisplayCharacterCount": #TextareaDisplayCharacterCount
       }
     },
     {

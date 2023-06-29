@@ -11,92 +11,164 @@
         <form asp-action="Radio">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="Title">
+                    Title
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="title" class="govuk-input govuk-input--width-20" id="Title" maxlength="100" name="Title" type="text" value="">
+                </div>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="PageSlug" class="control-label"></label>
-                <input asp-for="PageSlug" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="PTag">
+                    PTag
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="PTag" class="govuk-input govuk-input--width-20" id="PTag" maxlength="250" name="PTag" type="text" value="">
+                </div>
+                <span asp-validation-for="PTag" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+
+                <label class="govuk-label govuk-label--m" for="PageSlug">
+                    PageSlug
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="PageSlug" class="govuk-input govuk-input--width-20" id="PageSlug" maxlength="250" name="PageSlug" type="text" value="">
+                </div>
                 <span asp-validation-for="PageSlug" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="QuestionID" class="control-label"></label>
-                <input asp-for="QuestionID" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="QuestionID">
+                    QuestionID
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="QuestionID" class="govuk-input govuk-input--width-20" id="QuestionID" maxlength="250" name="QuestionID" type="text" value="">
+                </div>
                 <span asp-validation-for="QuestionID" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Label" class="control-label"></label>
-                <input asp-for="Label" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="Label">
+                    Label
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="Label" class="govuk-input govuk-input--width-20" id="Label" maxlength="250" name="Label" type="text" value="">
+                </div>
                 <span asp-validation-for="Label" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="CustomValidationMessage" class="control-label"></label>
-                <input asp-for="CustomValidationMessage" class="form-control" />
-                <span asp-validation-for="CustomValidationMessage" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Hint" class="control-label"></label>
-                <input asp-for="Hint" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="Hint">
+                    Hint
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="Hint" class="govuk-input govuk-input--width-20" id="Hint" maxlength="250" name="Hint" type="text" value="">
+                </div>
                 <span asp-validation-for="Hint" class="text-danger"></span>
             </div>
-            Optional
-            <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input"
-                           type="radio"
-                           value="true"
-                           name="Optional"
-                           id="Optional-0" />
+            <br />
+            <div class="form-group">
+                <label class="govuk-label govuk-label--m" for="CustomValidationMessage">
+                    CustomValidationMessage
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="CustomValidationMessage" class="govuk-input govuk-input--width-20" id="CustomValidationMessage" maxlength="250" name="CustomValidationMessage" type="text" value="">
+                </div>
+                <span asp-validation-for="CustomValidationMessage" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="govuk-label govuk-label--m" for="Optional">
+                    Optional
+                </label>
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input"
+                               type="radio"
+                               value="yes"
+                               name="Optional"
+                               id="Optional-0" />
 
-                    <label class="govuk-label govuk-radios__label"
-                           for="Optional-0">
-                        True
-                    </label>
+                        <label class="govuk-label govuk-radios__label"
+                               for="Optional-0">
+                            Yes
+                        </label>
 
+
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input"
+                               type="radio"
+                               value="no"
+                               name="Optional"
+                               id="Optional-1"
+                               checked />
+
+                        <label class="govuk-label govuk-radios__label"
+                               for="Optional-1">
+                            No
+                        </label>
+
+
+                    </div>
                 </div>
             </div>
-
-            <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input"
-                           type="radio"
-                           value="false"
-                           name="Optional"
-                           id="Optional-1" />
-
-                    <label class="govuk-label govuk-radios__label"
-                           for="Optional-1">
-                        False
-                    </label>
-
+            <br />
+            <div class="form-group">
+                <label class="govuk-label govuk-label--m" for="GoPageSlug">
+                    GoPageSlug
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="GoPageSlug" class="govuk-input govuk-input--width-20" id="GoPageSlug" maxlength="250" name="GoPageSlug" type="text" value="">
                 </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="Option1Text" class="control-label"></label>
-                <input asp-for="Option1Text" class="form-control" />
-                <span asp-validation-for="Option1Text" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Option1Value" class="control-label"></label>
-                <input asp-for="Option1Value" class="form-control" />
-                <span asp-validation-for="Option1Value" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Option2Text" class="control-label"></label>
-                <input asp-for="Option2Text" class="form-control" />
-                <span asp-validation-for="Option2Text" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Option2Value" class="control-label"></label>
-                <input asp-for="Option2Value" class="form-control" />
-                <span asp-validation-for="Option2Value" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="GoPageSlug" class="control-label"></label>
-                <input asp-for="GoPageSlug" class="form-control" />
                 <span asp-validation-for="GoPageSlug" class="text-danger"></span>
             </div>
+            <br />
+            <div class="form-group">
+                <label class="govuk-label govuk-label--m" for="Option1Text">
+                    Option1Text
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="Option1Text" class="govuk-input govuk-input--width-20" id="Option1Text" maxlength="250" name="Option1Text" type="text" value="">
+                </div>
+                <span asp-validation-for="Option1Text" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="govuk-label govuk-label--m" for="Option1Value">
+                    Option1Value
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="Option1Value" class="govuk-input govuk-input--width-20" id="Option1Value" maxlength="250" name="Option1Value" type="text" value="">
+                </div>
+                <span asp-validation-for="Option1Value" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="govuk-label govuk-label--m" for="Option2Text">
+                    Option2Text
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="Option2Text" class="govuk-input govuk-input--width-20" id="Option2Text" maxlength="250" name="Option2Text" type="text" value="">
+                </div>
+                <span asp-validation-for="Option2Text" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="govuk-label govuk-label--m" for="Option2Value">
+                    Option2Value
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="Option2Value" class="govuk-input govuk-input--width-20" id="Option2Value" maxlength="250" name="Option2Value" type="text" value="">
+                </div>
+                <span asp-validation-for="Option2Value" class="text-danger"></span>
+            </div>
+            <br />
+           
             <input asp-for="TheJSON" hidden class="form-control" value="@Model.TheJSON" />
 
             <br />
@@ -106,7 +178,38 @@
         </form>
     </div>
 </div>
+<script>
 
+    window.onload = function () {
+        var ttl = document.getElementById("Title"),
+        lbl = document.getElementById("Label");
+        pgslg = document.getElementById("PageSlug");
+        qstnid = document.getElementById("QuestionID");
+
+        op1Text = document.getElementById("Option1Text");
+        op1Value = document.getElementById("Option1Value");
+        op2Text = document.getElementById("Option2Text");
+        op2Value = document.getElementById("Option2Value");
+
+
+        ttl.addEventListener('input', function () {
+            lbl.value = ttl.value;
+        });
+
+        pgslg.addEventListener('input', function () {
+            qstnid.value = pgslg.value.replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "").replace("-", "");
+        });
+
+        op1Text.addEventListener('input', function () {
+            op1Value.value = op1Text.value;
+        });
+
+        op2Text.addEventListener('input', function () {
+            op2Value.value = op2Text.value;
+        });
+
+    };
+</script>
 
 @section Scripts {
     @{

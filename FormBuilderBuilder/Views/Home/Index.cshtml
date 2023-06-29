@@ -4,30 +4,44 @@
     ViewData["Title"] = "Header";
 }
 
-
 <div class="row">
     <div class="col-md-6">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h2 class="govuk-fieldset__heading">
-                Form basics:
+                Form basics
 
             </h2>
         </legend>
         <form asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
-                <label asp-for="FormName" class="control-label"></label>
-                <input asp-for="FormName" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="FormName">
+                    FormName
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="FormName" class="govuk-input govuk-input--width-20" id="FormName" maxlength="100" name="FormName" type="text" value="">
+                </div>
                 <span asp-validation-for="FormName" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="BaseURL" class="control-label"></label>
-                <input asp-for="BaseURL" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="BaseURL">
+                    BaseURL
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="BaseURL" class="govuk-input govuk-input--width-20" id="BaseURL" maxlength="100" name="BaseURL" type="text" value="">
+                </div>
                 <span asp-validation-for="BaseURL" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="FirstPageSlug" class="control-label"></label>
-                <input asp-for="FirstPageSlug" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="FirstPageSlug">
+                    FirstPageSlug
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="FirstPageSlug" class="govuk-input govuk-input--width-20" id="FirstPageSlug" maxlength="100" name="FirstPageSlug" type="text" value="">
+                </div>
                 <span asp-validation-for="FirstPageSlug" class="text-danger"></span>
             </div>
             <br />

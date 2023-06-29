@@ -1,4 +1,5 @@
 ﻿using FormBuilderBuilder.Models;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 
 namespace FormBuilderBuilder.Services
 {
@@ -46,13 +47,22 @@ namespace FormBuilderBuilder.Services
 
 			string savedJSONFile = File.ReadAllText(textboxViewModel.TheJSON);
 
-			savedJSONFile = savedJSONFile.Replace("#TextboxPTag", textboxViewModel.PTag);
+            savedJSONFile = savedJSONFile.Replace("#TextboxPTag", textboxViewModel.PTag);
 			savedJSONFile = savedJSONFile.Replace("#TextboxTitle", textboxViewModel.Title);
 			savedJSONFile = savedJSONFile.Replace("#TextboxPageSlug", textboxViewModel.PageSlug);
 			savedJSONFile = savedJSONFile.Replace("#TextboxQuestionID", textboxViewModel.QuestionID);
 			savedJSONFile = savedJSONFile.Replace("#TextboxLabel", textboxViewModel.Label);
-			savedJSONFile = savedJSONFile.Replace("#TextboxCustomValidationMessage", textboxViewModel.CustomValidationMessage);
-			savedJSONFile = savedJSONFile.Replace("#TextboxOptional", textboxViewModel.Optional);
+            savedJSONFile = savedJSONFile.Replace("#TextboxHint", textboxViewModel.Hint);
+            savedJSONFile = savedJSONFile.Replace("#TextboxCustomValidationMessage", textboxViewModel.CustomValidationMessage);
+			if (textboxViewModel.Optional == "yes")
+			{
+                savedJSONFile = savedJSONFile.Replace("#TextboxOptional", "true");
+            }
+			else
+			{
+                savedJSONFile = savedJSONFile.Replace("#TextboxOptional", "false");
+            }
+			
 			savedJSONFile = savedJSONFile.Replace("#TextboxGoPageSlug", textboxViewModel.GoPageSlug);
 
 			File.WriteAllText(textboxViewModel.TheJSON, savedJSONFile);
@@ -72,13 +82,29 @@ namespace FormBuilderBuilder.Services
 			savedJSONFile = savedJSONFile.Replace("#TextareaQuestionID", textareaViewModel.QuestionID);
 			savedJSONFile = savedJSONFile.Replace("#TextareaLabel", textareaViewModel.Label);
 			savedJSONFile = savedJSONFile.Replace("#TextareaCustomValidationMessage", textareaViewModel.CustomValidationMessage);
-			savedJSONFile = savedJSONFile.Replace("#TextareaDisplayCharacterCount", textareaViewModel.DisplayCharacterCount);
+            if (textareaViewModel.DisplayCharacterCount == "yes")
+            {
+                savedJSONFile = savedJSONFile.Replace("#TextareaDisplayCharacterCount", "true");
+            }
+            else
+            {
+                savedJSONFile = savedJSONFile.Replace("#TextareaDisplayCharacterCount", "false");
+            }
+            savedJSONFile = savedJSONFile.Replace("#TextareaDisplayCharacterCount", textareaViewModel.DisplayCharacterCount);
 			savedJSONFile = savedJSONFile.Replace("#TextareaHint", textareaViewModel.Hint);
 			savedJSONFile = savedJSONFile.Replace("#TextareaMaxLength", textareaViewModel.MaxLength.ToString());
 
 
-			savedJSONFile = savedJSONFile.Replace("#TextareaOptional", textareaViewModel.Optional);
-			savedJSONFile = savedJSONFile.Replace("#TextareaGoPageSlug", textareaViewModel.GoPageSlug);
+			//savedJSONFile = savedJSONFile.Replace("#TextareaOptional", textareaViewModel.Optional);
+            if (textareaViewModel.Optional == "yes")
+            {
+                savedJSONFile = savedJSONFile.Replace("#TextareaOptional", "true");
+            }
+            else
+            {
+                savedJSONFile = savedJSONFile.Replace("#TextareaOptional", "false");
+            }
+            savedJSONFile = savedJSONFile.Replace("#TextareaGoPageSlug", textareaViewModel.GoPageSlug);
 
 			File.WriteAllText(textareaViewModel.TheJSON, savedJSONFile);
 
@@ -91,7 +117,8 @@ namespace FormBuilderBuilder.Services
 			File.AppendAllText(radioViewModel.TheJSON, File.ReadAllText(Radio));
 
 			string savedJSONFile = File.ReadAllText(radioViewModel.TheJSON);
-			savedJSONFile = savedJSONFile.Replace("#RadioTitle", radioViewModel.Title);
+            savedJSONFile = savedJSONFile.Replace("#RadioPTag", radioViewModel.PTag);
+            savedJSONFile = savedJSONFile.Replace("#RadioTitle", radioViewModel.Title);
 			savedJSONFile = savedJSONFile.Replace("#RadioPageSlug", radioViewModel.PageSlug);
 			savedJSONFile = savedJSONFile.Replace("#RadioQuestionID", radioViewModel.QuestionID);
 			savedJSONFile = savedJSONFile.Replace("#RadioLabel", radioViewModel.Label);
@@ -118,7 +145,8 @@ namespace FormBuilderBuilder.Services
 
 			string savedJSONFile = File.ReadAllText(checkboxViewModel.TheJSON);
 			savedJSONFile = savedJSONFile.Replace("#CheckboxTitle", checkboxViewModel.Title);
-			savedJSONFile = savedJSONFile.Replace("#CheckboxPageSlug", checkboxViewModel.PageSlug);
+            savedJSONFile = savedJSONFile.Replace("#CheckboxPTag", checkboxViewModel.PTag);
+            savedJSONFile = savedJSONFile.Replace("#CheckboxPageSlug", checkboxViewModel.PageSlug);
 			savedJSONFile = savedJSONFile.Replace("#CheckboxQuestionID", checkboxViewModel.QuestionID);
 			savedJSONFile = savedJSONFile.Replace("#CheckboxLabel", checkboxViewModel.Label);
 			savedJSONFile = savedJSONFile.Replace("#CheckboxCustomValidationMessage", checkboxViewModel.CustomValidationMessage);

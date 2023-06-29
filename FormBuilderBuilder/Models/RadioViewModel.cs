@@ -8,7 +8,9 @@ namespace FormBuilderBuilder.Models
 		[Required]
 		[Display(Name = "Title")]
 		public string Title { get; set; }
-		[Required]
+        [Display(Name = "Opening paragraph")]
+        public string? PTag { get; set; }
+        [Required]
 		[Display(Name = "Page slug e.g. make-a-choice")]
 		public string PageSlug { get; set; }
 		[Required]

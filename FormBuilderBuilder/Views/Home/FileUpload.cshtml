@@ -12,30 +12,57 @@
         <form asp-action="FileUpload">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="Title">
+                    Title
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="title" class="govuk-input govuk-input--width-20" id="Title" maxlength="100" name="Title" type="text" value="">
+                </div>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="PageSlug" class="control-label"></label>
-                <input asp-for="PageSlug" class="form-control" />
-                <span asp-validation-for="PageSlug" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PTag" class="control-label"></label>
-                <input asp-for="PTag" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="PTag">
+                    PTag
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="PTag" class="govuk-input govuk-input--width-20" id="PTag" maxlength="250" name="PTag" type="text" value="">
+                </div>
                 <span asp-validation-for="PTag" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="ListItems" class="control-label"></label>
-                <input asp-for="ListItems" class="form-control" />
+
+                <label class="govuk-label govuk-label--m" for="PageSlug">
+                    PageSlug
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="PageSlug" class="govuk-input govuk-input--width-20" id="PageSlug" maxlength="250" name="PageSlug" type="text" value="">
+                </div>
+                <span asp-validation-for="PageSlug" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+
+                <label class="govuk-label govuk-label--m" for="ListItems">
+                    ListItems
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="ListItems" class="govuk-input govuk-input--width-20" id="ListItems" maxlength="250" name="ListItems" type="text" value="">
+                </div>
                 <span asp-validation-for="ListItems" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="GoPageSlug" class="control-label"></label>
-                <input asp-for="GoPageSlug" class="form-control" />
+                <label class="govuk-label govuk-label--m" for="GoPageSlug">
+                    GoPageSlug
+                </label>
+                <div class="govuk-input__wrapper">
+                    <input autocomplete="GoPageSlug" class="govuk-input govuk-input--width-20" id="GoPageSlug" maxlength="250" name="GoPageSlug" type="text" value="">
+                </div>
                 <span asp-validation-for="GoPageSlug" class="text-danger"></span>
             </div>
+            <br />
             <input asp-for="TheJSON" hidden class="form-control" value="@Model.TheJSON" />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

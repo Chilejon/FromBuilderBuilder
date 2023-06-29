@@ -1,6 +1,6 @@
 {
   "FormName": "#FormName",
-  "BaseURL": "generic-form",
+  "BaseURL": "#BaseURL",
   "StartPageUrl": "https://www.stockport.gov.uk",
   "FirstPageSlug": "#FirstPageSlug",
   "GenerateReferenceNumber": true,
@@ -14,14 +14,6 @@
     {
       "Environment": "qa",
       "IsAvailable": true
-    },
-    {
-      "Environment": "stage",
-      "IsAvailable": false
-    },
-    {
-      "Environment": "prod",
-      "IsAvailable": false
     }
   ],
   "Pages": [
