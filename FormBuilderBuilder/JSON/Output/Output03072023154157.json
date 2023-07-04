@@ -1,0 +1,57 @@
+{
+  "FormName": "sadf",
+  "BaseURL": "sadf",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "fdsafads",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    }
+  ],
+  "Pages": [
+{
+  "Title": "asfd",
+  "PageSlug": "fdsafads",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "asdf",
+        "Label": "asfd",
+        "LabelAsH1": true,
+        "Hint": "asfdfasd",
+        "CustomValidationMessage": "",
+        "Optional": false
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "qwert"
+    }
+  ]
+},

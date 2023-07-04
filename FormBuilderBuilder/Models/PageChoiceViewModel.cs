@@ -8,5 +8,6 @@ namespace FormBuilderBuilder.Models
 		public string PageChoice { get; set; }
 		public bool ShowOptions { get; set; } = true;
 		public string TheJSON {  get; set; }
+		public string NextSlug { get; set; }
 	}
 }

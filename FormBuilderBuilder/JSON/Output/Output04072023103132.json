@@ -1,0 +1,105 @@
+{
+  "FormName": "asdfasdf",
+  "BaseURL": "asdfasdf",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "343434",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    }
+  ],
+  "Pages": [
+{
+  "Title": "asdfasdf",
+  "PageSlug": "343434",
+  "HideTitle": true,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "a"
+      }
+    },
+    {
+      "Type": "Radio",
+      "Properties": {
+        "QuestionId": "asdfasdf",
+        "Label": "asdfasdf",
+        "LabelAsH1": true,
+        "Hint": "sadfasdf",
+        "CustomValidationMessage": "",
+        "Optional": "no",
+        "Options": [
+          {
+            "Text": "sadf",
+            "Value": "sadf"
+          },
+          {
+            "Text": "qwer",
+            "Value": "sadf"
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "asdf"
+    }
+  ]
+},{
+  "Title": "qwerqwer",
+  "PageSlug": "asdf",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Textarea",
+      "Properties": {
+        "QuestionId": "fasdf",
+        "Label": "qwerqwer",
+        "LabelAsH1": true,
+        "Hint": "",
+        "CustomValidationMessage": "",
+        "Optional": false,
+        "MaxLength": "44",
+        "DisplayCharacterCount": true
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "rtrtrttr"
+    }
+  ]
+},

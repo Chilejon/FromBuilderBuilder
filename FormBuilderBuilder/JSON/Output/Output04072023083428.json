@@ -1,0 +1,19 @@
+{
+  "FormName": "asfasdf",
+  "BaseURL": "asfasdf",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "aaaaaaaaaa",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    }
+  ],
+  "Pages": [

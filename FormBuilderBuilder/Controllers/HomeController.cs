@@ -37,8 +37,9 @@ namespace FormBuilderBuilder.Controllers
 			string theJSON = buildPages.BuildTheJson(homeViewModel);
 
 			ViewBag.TheJSON = theJSON;
+            ViewBag.NextSlug = homeViewModel.FirstPageSlug;
 
-			PageChoiceViewModel viewModel = new PageChoiceViewModel();
+            PageChoiceViewModel viewModel = new PageChoiceViewModel();
 			
 			return View("PageChoice", viewModel);
 		}
@@ -66,38 +67,43 @@ namespace FormBuilderBuilder.Controllers
 				case "Textbox":
 					TextboxViewModel TBviewModel = new TextboxViewModel();
 					TBviewModel.TheJSON = pageChoiceViewModel.TheJSON;
-					return View(pageChoiceViewModel.PageChoice, TBviewModel);
+					TBviewModel.PageSlug = pageChoiceViewModel.NextSlug;
+                    return View(pageChoiceViewModel.PageChoice, TBviewModel);
 
 				case "TextArea":
 					TextareaViewModel TAviewModel = new TextareaViewModel();
 					TAviewModel.TheJSON = pageChoiceViewModel.TheJSON;
-					return View(pageChoiceViewModel.PageChoice, TAviewModel);
+                    TAviewModel.PageSlug = pageChoiceViewModel.NextSlug;
+                    return View(pageChoiceViewModel.PageChoice, TAviewModel);
 
                 case "Radio":
 					RadioViewModel radioViewModel = new RadioViewModel();
 					radioViewModel.TheJSON = pageChoiceViewModel.TheJSON;
-					return View(pageChoiceViewModel.PageChoice, radioViewModel);
+                    radioViewModel.PageSlug = pageChoiceViewModel.NextSlug;
+                    return View(pageChoiceViewModel.PageChoice, radioViewModel);
 
 				case "Checkbox":
 					CheckboxViewModel checkboxViewModel = new CheckboxViewModel();
 					checkboxViewModel.TheJSON = pageChoiceViewModel.TheJSON;
-					return View(pageChoiceViewModel.PageChoice, checkboxViewModel);
+                    checkboxViewModel.PageSlug = pageChoiceViewModel.NextSlug;
+                    return View(pageChoiceViewModel.PageChoice, checkboxViewModel);
 
 				case "Declaration":
 					DeclarationViewModel declarationViewModel = new DeclarationViewModel();
 					declarationViewModel.TheJSON = pageChoiceViewModel.TheJSON;
-					return View(pageChoiceViewModel.PageChoice, declarationViewModel);
+                    return View(pageChoiceViewModel.PageChoice, declarationViewModel);
 
 				case "FileUpload":
 					FileUploadViewModel fileUploadViewModel = new FileUploadViewModel();
 					fileUploadViewModel.TheJSON = pageChoiceViewModel.TheJSON;
-					return View(pageChoiceViewModel.PageChoice, fileUploadViewModel);
+                    fileUploadViewModel.PageSlug = pageChoiceViewModel.NextSlug;
+                    return View(pageChoiceViewModel.PageChoice, fileUploadViewModel);
 
 				case "FullContactDetails":
 					//BuildPages buildPages = new BuildPages();
 					_buildPages.BuildTheJson(pageChoiceViewModel.TheJSON);
 					ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
-					return View("PageChoice", pageChoiceViewModel);
+                    return View("PageChoice", pageChoiceViewModel);
 
 				case "Endform":
                     //BuildPages fbuildPages = new BuildPages();
@@ -116,7 +122,8 @@ namespace FormBuilderBuilder.Controllers
 		public IActionResult Textbox(PageChoiceViewModel pageChoiceViewModel)
 		{
 			ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
-			return View();
+           // ViewBag.NextSlug = pageChoiceViewModel.NextSlug;
+            return View();
 		}
 
 		[HttpPost]
@@ -132,14 +139,16 @@ namespace FormBuilderBuilder.Controllers
 
 
 			ViewBag.TheJSON = textboxViewModel.TheJSON;
-			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+            ViewBag.NextSlug = textboxViewModel.GoPageSlug;
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true, NextSlug = textboxViewModel.GoPageSlug };
 			return View("PageChoice", pageChoiceViewModel);
 		}
 
 		public IActionResult Textarea(PageChoiceViewModel pageChoiceViewModel)
 		{
 			ViewBag.TheJSON = pageChoiceViewModel.TheJSON;
-			return View();
+
+            return View();
 		}
 
 		[HttpPost]
@@ -153,7 +162,8 @@ namespace FormBuilderBuilder.Controllers
 			//BuildPages buildPages = new BuildPages();
 			string theJSON = _buildPages.BuildTheJson(textareaViewModel);
 			ViewBag.TheJSON = textareaViewModel.TheJSON;
-			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+            ViewBag.NextSlug = textareaViewModel.GoPageSlug;
+            PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true, NextSlug = textareaViewModel.GoPageSlug };
 			return View("PageChoice", pageChoiceViewModel);
 		}
 
@@ -173,7 +183,8 @@ namespace FormBuilderBuilder.Controllers
 						
 			string theJSON = _buildPages.BuildTheJson(radioViewModel);
 			ViewBag.TheJSON = radioViewModel.TheJSON;
-			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+            ViewBag.NextSlug = radioViewModel.GoPageSlug;
+            PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true, NextSlug = radioViewModel.GoPageSlug };
 			return View("PageChoice", pageChoiceViewModel);
 		}
 
@@ -193,7 +204,8 @@ namespace FormBuilderBuilder.Controllers
 
 			string theJSON = _buildPages.BuildTheJson(checkboxViewModel);
 			ViewBag.TheJSON = checkboxViewModel.TheJSON;
-			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+            ViewBag.NextSlug = checkboxViewModel.GoPageSlug;
+            PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true, NextSlug = checkboxViewModel.GoPageSlug };
 			return View("PageChoice", pageChoiceViewModel);
 		}
 
@@ -234,7 +246,8 @@ namespace FormBuilderBuilder.Controllers
 			//BuildPages buildPages = new BuildPages();
 			string theJSON = _buildPages.BuildTheJson(fileUploadViewModel);
 			ViewBag.TheJSON = fileUploadViewModel.TheJSON;
-			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true };
+			ViewBag.NextSlug = fileUploadViewModel.GoPageSlug;
+			PageChoiceViewModel pageChoiceViewModel = new PageChoiceViewModel() { ShowOptions = true, NextSlug = fileUploadViewModel.GoPageSlug };
 			return View("PageChoice", pageChoiceViewModel);
 		}
 

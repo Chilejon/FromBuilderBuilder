@@ -1,0 +1,57 @@
+{
+  "FormName": "wertwret",
+  "BaseURL": "wertwret",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "dfgsdfg",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    }
+  ],
+  "Pages": [
+{
+  "Title": "asdfsadfs",
+  "PageSlug": "dfgsdfg",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "asdfsadfsadf",
+        "Label": "asdfsadfs",
+        "LabelAsH1": true,
+        "Hint": "",
+        "CustomValidationMessage": "",
+        "Optional": false
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "qwqwqwqw"
+    }
+  ]
+},

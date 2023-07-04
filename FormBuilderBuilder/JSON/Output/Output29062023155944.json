@@ -1,0 +1,345 @@
+{
+  "FormName": "Supported accommodation complaint form",
+  "BaseURL": "supported-accommodation",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "are-you",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    }
+  ],
+  "Pages": [
+{
+  "Title": "Are you?",
+  "PageSlug": "are-you",
+  "HideTitle": true,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Radio",
+      "Properties": {
+        "QuestionId": "areyou",
+        "Label": "Are you?",
+        "LabelAsH1": true,
+        "Hint": "",
+        "CustomValidationMessage": "",
+        "Optional": false,
+        "Options": [
+          {
+            "Text": "Tenant",
+            "Value": "Tenant"
+          },
+          {
+            "Text": "Ex tenant",
+            "Value": "Tenant"
+          },
+{
+            "Text": "Relative",
+            "Value": "Relative"
+          },
+          {
+            "Text": "Friend of tenant",
+            "Value": "Friend of tenant"
+          },
+{
+            "Text": "Professional supporting a tenant",
+            "Value": "Professional supporting a tenant"
+          },
+          {
+            "Text": "Neighbour",
+            "Value": "Neighbour"
+          },
+          {
+            "Text": "Other",
+            "Value": "Other",
+"ConditionalElementId": "areYouOther"
+          }
+        ]
+      },
+{
+            "Type": "Textbox",
+            "Properties": {
+              "QuestionId": "areYouOther",
+              "Label": "Specify other",
+              "CustomValidationMessage": "Enter the other",
+              "IsConditionalElement": true,
+              "MaxLength": 50
+            }
+          },
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "support-address"
+    }
+  ]
+},{
+  "Title": "Supported accommodation address your concern relates to",
+  "PageSlug": "support-address",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Textarea",
+      "Properties": {
+        "QuestionId": "supportaccomodation",
+        "Label": "Supported accommodation address your concern relates to",
+        "LabelAsH1": true,
+        "Hint": "",
+        "CustomValidationMessage": "",
+        "Optional": false,
+        "MaxLength": "200",
+        "DisplayCharacterCount": true
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "concern-details"
+    }
+  ]
+},
+{
+  "Title": "Please give details of your concern",
+  "PageSlug": "concern-details",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Textarea",
+      "Properties": {
+        "QuestionId": "concerndetails",
+        "Label": "Please give details of your concern",
+        "LabelAsH1": true,
+        "Hint": "",
+        "CustomValidationMessage": "",
+        "Optional": false,
+        "MaxLength": "500",
+        "DisplayCharacterCount": true
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "your-details"
+    }
+  ]
+},
+{
+  "Title": "What is your name?",
+  "PageSlug": "your-details",
+  "Elements": [
+    {
+      "Type": "Reusable",
+      "Properties": {
+        "QuestionId": "firstName"
+      },
+      "ElementRef": "firstname"
+    },
+    {
+      "Type": "Reusable",
+      "Properties": {
+        "QuestionId": "lastName"
+      },
+      "ElementRef": "lastname"
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep",
+        "Text": "Continue"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "your-address"
+    }
+  ]
+},
+      {
+        "Title": "What is your home address?",
+        "PageSlug": "your-address",
+        "Elements": [
+          {
+            "Type": "Address",
+            "Properties": {
+              "QuestionId": "address",
+              "AddressProvider": "CRM",
+              "StockportPostcode": false,
+              "MaxLength": 60
+            }
+          },
+          {
+            "Type": "Button",
+            "Properties": {
+              "ButtonId": "nextStep",
+              "Text": "Continue"
+            }
+          }
+        ],
+        "Behaviours": [
+          {
+            "conditions": [],
+            "behaviourType": "GoToPage",
+            "PageSlug": "your-contact-details"
+          }
+        ]
+      },
+      {
+        "Title": "What are your contact details?",
+        "PageSlug": "your-contact-details",
+        "Elements": [
+          {
+            "Type":"Reusable",
+            "Properties":{
+               "QuestionId":"email"
+            },
+            "ElementRef":"email"
+          },
+          {
+            "Type": "Button",
+            "Properties": {
+              "ButtonId": "nextStep"
+            }
+          }
+        ],
+        "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "summary"
+    }
+  ]
+},
+  
+{
+  "Title": "Summary of answers",
+  "PageSlug": "Summary",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "Summary",
+      "Properties": {
+        "QuestionId": "summary"
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep",
+        "Text": "Submit"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "SubmitForm",
+      "SubmitSlugs": [
+        {
+          "Environment": "local",
+          "URL": "https://prod-02.westeurope",
+          "AuthToken": "TestToken",
+          "Type": "flowtoken"
+        },
+        {
+          "Environment": "Int",
+          "URL": "https://prod-02.westeurope",
+          "AuthToken": "TestToken",
+          "Type": "flowtoken"
+        },
+        {
+          "Environment": "QA",
+          "URL": "https://prod-02.westeurope.logic.azure.com:443/workflows/be58841bfa1b415294594e747d58216f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O-WYX0zagjM3Vo5fbnagiDFlNOcr5lwpA9A3PUPentc",
+          "AuthToken": "TestToken",
+          "Type": "flowtoken"
+        }
+      ]
+    }
+  ]
+},
+{
+  "Title": "We've received your form",
+  "BannerTitle": "We've received your form",
+  "PageSlug": "success",
+  "HideBackButton": true,
+  "Elements": [
+    {
+      "Type": "H2",
+      "Properties": {
+        "Text": "What happens next"
+      }
+    },
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": "#SuccessPTag"
+      }
+    },
+    {
+      "Type": "link",
+      "Properties": {
+        "Text": "Go to the homepage",
+        "QuestionId": "LinkToHomePage",
+        "Url": "https://www.stockport.gov.uk/",
+        "OpenInTab": true,
+        "ClassName": "govuk-button"
+      }
+    }
+  ]
+}
+  ]
+}

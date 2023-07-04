@@ -1,0 +1,19 @@
+{
+  "FormName": "sdfg",
+  "BaseURL": "sdfg",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "sdfg-sdfg",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    }
+  ],
+  "Pages": [

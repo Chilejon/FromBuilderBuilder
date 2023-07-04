@@ -1,0 +1,57 @@
+{
+  "FormName": "wqert",
+  "BaseURL": "wqert",
+  "StartPageUrl": "https://www.stockport.gov.uk",
+  "FirstPageSlug": "aaaaaaaaaaa",
+  "GenerateReferenceNumber": true,
+  "GeneratedReferenceNumberMapping": "Reference",
+  "ReferencePrefix": "generic-form-",
+  "EnvironmentAvailabilities": [
+    {
+      "Environment": "int",
+      "IsAvailable": true
+    },
+    {
+      "Environment": "qa",
+      "IsAvailable": true
+    }
+  ],
+  "Pages": [
+{
+  "Title": "ertwertwert",
+  "PageSlug": "aaaaaaaaaaa",
+  "HideTitle": true,
+  "HideBackButton": false,
+  "Elements": [
+    {
+      "Type": "p",
+      "Properties": {
+        "Text": ""
+      }
+    },
+    {
+      "Type": "Textbox",
+      "Properties": {
+        "QuestionId": "zxcvxzcv",
+        "Label": "ertwertwert",
+        "LabelAsH1": true,
+        "Hint": "asdf",
+        "CustomValidationMessage": "",
+        "Optional": false
+      }
+    },
+    {
+      "Type": "Button",
+      "Properties": {
+        "ButtonId": "nextStep"
+      }
+    }
+  ],
+  "Behaviours": [
+    {
+      "conditions": [],
+      "behaviourType": "GoToPage",
+      "PageSlug": "bbbbbbbb"
+    }
+  ]
+},
